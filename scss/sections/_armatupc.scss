@@ -1,0 +1,60 @@
+@import 'variables';
+
+/* Armatupc */
+
+.armatupc__main {
+    background-color: $color-fondo;
+}
+
+.armatupc__main__section {
+    margin: 30px;
+    font-family: $font-family;
+    @include flex-align-column-center;
+}
+
+.armatupc__main__section {
+    h1{
+        font-weight: unset;
+        font-size: 60px;
+        margin: 10px 0 15px 0;
+    }
+}
+
+.armatupc__main__section {
+    h2{
+        font-weight: unset;
+        font-size: 40px;
+    }
+}
+
+.armatupc__main__section {
+    p {
+        font-size: 30px;
+        width: 650px;
+        margin: 30px 0 30px 0;
+    }
+}
+.armatupc__main__aside {
+    max-width: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .carousel-item img {
+    transition: transform 1s ease;
+    transform: scale(1); /* Esto asegura que la imagen no tenga zoom aplicado */
+  }
+  .payment-data .payment-data-container {
+    background-color: #fff;
+    display: flex center;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+    display: flex;
+    height: 90px;
+    margin: 0 auto;
+    max-width: 1184px;
+    overflow: hidden;
+}
+/* // Armatupc */

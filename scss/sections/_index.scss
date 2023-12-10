@@ -1,0 +1,55 @@
+@import 'variables';
+
+/* Index */
+
+
+.index__main {
+    flex-grow: 1;
+    background-color: $color-fondo;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 30px 0 30px 0;
+    /*1er num arriba, 2do num derecha, 3er num abajo, 4to num izquierdo */
+    position: relative;
+}
+
+.index__main__section {
+    @include flex-align-column-center;
+    width: 40vw;
+    padding: 20px;
+}
+
+.index__section__titulo {
+    color: #060611;
+    font-family: $font-family;
+    font-weight: 300;
+    font-size: 40px;
+    text-align: center;
+}
+
+.index__section__subtitulo {
+    color: #060611;
+    font-family: $font-family;
+    font-weight: 300;
+    font-size: 40px;
+    text-align: center;
+}
+
+.index__section__parrafo {
+    margin: 25px 0;
+    height: auto;
+    text-align: center;
+    font-weight: 200;
+    color: #060611;
+    font-family: $font-family;
+}
+
+.index__section__video {
+    margin: 30px 0;
+    height: 600px;
+    width: 40vw;
+}
+
+
+/* // Index // */

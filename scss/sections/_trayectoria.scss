@@ -1,0 +1,49 @@
+@import 'variables';
+
+/* trayectoria */
+
+
+.trayectoria__main {
+    flex-grow: 1;
+    background-color: $color-fondo;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px 0 30px 0; /*1er num arriba, 2do num derecha, 3er num abajo, 4to num izquierdo */
+    position: relative;
+}
+
+.trayectoria__main__section {
+    @include flex-align-column-center;
+    padding: 20px;
+}
+
+.trayectoria__section__container {
+    margin: 20px 0;
+}
+
+.trayectoria__section__titulo {
+    color: #060611;
+    font-family: $font-family;
+    font-weight: 300;
+    font-size: 40px;
+    text-align: center;
+}
+
+.trayectoria__section__parrafo {
+    margin: 25px 0;
+    width: 600px;
+    height: auto;
+    text-align: center;
+    font-weight: 200;
+    color: #060611;
+    font-family: $font-family;
+}
+
+.trayectoria__section__img {
+    max-width: 100%;
+    height: auto;
+    
+}
+
+
+/* // trayectoria */

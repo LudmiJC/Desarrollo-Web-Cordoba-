@@ -1,0 +1,156 @@
+@import 'variables';
+
+
+
+
+@media (max-width: 1024px) {
+
+    /* Index */
+
+    .index__main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .index__main__section {
+        width: 80vw;
+    }
+
+    .index__section__video {
+        width: 70vw;
+    }
+
+    /* Contacto */
+
+    .contacto__main {
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: 90%;
+        grid-template-rows: 20% 25% 25% 30%;
+        grid-template-areas:
+            "texto__contacto"
+            "formulario__contacto"
+            "formulario__contacto"
+            "mapa__contacto";
+        height: auto;
+    }
+
+    .contacto__main__form {
+        width: 350px;
+        label {
+            font-size: 22px;
+        }
+    }
+
+    .contacto__section__mapa {
+        margin: 30px 0;
+        width: 310px;
+        height: auto;
+    }
+
+    /* FIN Contacto */
+}
+
+@media (max-width: 720px) {
+
+    /* Header */
+
+    .header__nav {
+        margin: 20px 0;
+        text-align: center;
+        padding: 0 0;
+        height: 200;
+        width: 150px;
+        box-sizing: border-box;
+        ul {
+            justify-content: center;
+            li {
+                margin: 10px 0 10px 0;
+                a {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    .index__section__video {
+        height: auto;
+    }
+
+    /* Contacto */
+
+    .contacto__main__section {
+        padding: 0;
+        height: 250px;
+    }
+
+    .contacto__main {
+        grid-template-rows: 30% 23% 23% 24%;
+    }
+
+    .contacto__main__form {
+        padding: 30px 0;
+        width: 350px;
+    }
+
+
+    /* FIN Contacto */
+}
+
+@media (max-width: 420px) {
+
+    /* Header */
+
+    .footer {
+        h3{
+            font-size: 15px;
+        }
+    }
+
+    /* Contacto */
+
+    
+    .contacto__section__mapa {
+        width: 240px;
+    }
+
+    .contacto__main__section {
+        height: 300px;
+    }
+     
+    .contacto__main__form {
+        width: 250px;
+        label {
+            font-size: 20px;
+        }
+        input {
+            width: 200px;
+        }
+        textarea {
+            width: 190px;
+            height: 100px;
+            margin: 15px 0 10px 0;
+            font-family: $font-family;
+            text-align: center;
+        }
+    }
+    
+    .contacto__form__buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 200px;
+        button {
+            background-color: rgb(255, 255, 255);
+            font-family: $font-family;
+            height: 45px;
+            width: 85px;
+            border: 1px black ridge;
+            font-size: 20px;
+            padding: 10px;
+        }
+    }
+
+    /* FIN Contacto */
+}
+/* productos*/
