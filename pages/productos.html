@@ -13,7 +13,8 @@
 <body>
     <header class="header">
         <a href="../index.html">
-            <img class="header__img animate__animated animate__backInDown" src="../resources/images/Pc Planet rectangular.svg" alt="Logo Pc Planet">
+            <img class="header__img animate__animated animate__backInDown"
+                src="../resources/images/Pc Planet rectangular.svg" alt="Logo Pc Planet">
         </a>
         <nav class="header__nav">
             <ul>
@@ -25,225 +26,245 @@
             </ul>
         </nav>
     </header>
-    <main class="productos__main">
-        <section class="productos__main__section">
-            <h1 class="productos__section__titulo">Bienvenido a la seccion de Productos</h1>
-            <h2 class="productos__section__subtitulo">Catalogo de Componentes</h2>
+    <main class="productos__main__grid">
+        <section>
+            <article class="productos__article">
+                <!-- Titulo y parrafo -->
+                <h1 class="productos__titulo">Seccion de Productos</h1>
+                <p class="productos__parrafo">Aqui podra observar y elegir cuales son los productos que se adaptan
+                    a sus necesidades, comprando por unidad o cantidad. si usted lo que quiere es
+                    armar un computador le recomendamos que se diriga al apartado de Crear mi
+                    computadora, desde ya muchas gracias.
+                </p>
+            </article>
         </section>
-        <aside class="productos__aside">
+        <!-- Productos -->
+        <aside class="productos__aside__grid">
+            <h3 class="productos__grid__titulo__placasMadres">Placas madres</h3>
+
+            <!-- PLACAS MADRE -->
+
+            <div class="productos__grid__placaMadre1">
+                <h4>Asus Rog Strix <B550-f></B550-f> </h4><img
+                    src="../resources/images/mother asus rog strix B550-f.jpg" alt="asus rog strix B550-f">
+                <h3>Precio: $50.000</h3>
+            </div>
+            <div class="productos__grid__placaMadre2">
+                <h4>Asus Tuf B650M</h4><img src="../resources/images/mother asus tuf B650M.jpg" alt="asus tuf B650M">
+                <h3>Precio: $35.000</h3>
+            </div>
+            <div class="productos__grid__placaMadre3">
+                <h4>GigaByte X570SI</h4><img src="../resources/images/mother gigabyte X570SI.jpg" alt="GigaByte X570SI">
+                <h3>Precio: $85.000</h3>
+            </div>
+            <div class="productos__grid__placaMadre4">
+                <h4>MSI Force 5438S</h4><img src="../resources/images/placa_madre_4.svg" alt="MSI Force 5438S">
+                <h3>Precio: $85.000</h3>
+            </div>
 
             <!-- PROCESADORES -->
 
-            <div>
-                <div>
-                    <img src="../resources/images/ryzen 3 3200g.jpg" alt=" imgprocesador">
-                    <p>Procesador AMD Ryzen 3 3200G 4.6GHz Turbo + Wraith Stealth Cooler </p>
-                    <p class="precio">$199.99</p>
-                    <button class="boton-compra">Comprar</button>
-                </div>
-
-                <div>
-                    <img src="../resources/images/ryzen 5 5600g.jpg" alt="imgprocesador">
-                    <p>Procesador AMD Ryzen 5 5600g 4.6GHz Turbo + Wraith Stealth Cooler </p>
-                    <p class="precio">$199.99</p>
-                    <button class="boton-compra">Comprar</button>
-                </div>
-
-                <div>
-                    <img src="../resources/images/ryzen 7 5700g.jpg" alt="imgprocesador">
-                    <p>Procesador AMD Ryzen 7 5700G 4.6GHz Turbo + Wraith Stealth Cooler </p>
-                    <p class="precio">$199.99</p>
-                    <button class="boton-compra">Comprar</button>
-                </div>
+            <h3 class="productos__grid__titulo__procesadores">Procesadores</h3>
+            <div class="productos__grid__procesador1">
+                <h4>AMD Ryzen 3 3200g</h4><img src="../resources/images/ryzen 3 3200g.jpg" alt="AMD Ryzen 3 3200g">
+                <h3>Precio: $25.000</h3>
             </div>
-
-            <!-- MOTHERS -->
-
-            <div>
-                <div>
-                    <img src="../resources/images/mother asus tuf B650M.jpg" alt="imgmothers">
-                    <p>mother asus tuf B650M</p>
-                    <p class="precio">$199.99</p>
-                    <button class="boton-compra">Comprar</button>
-                </div>
-
-                <div>
-                    <img src="../resources/images/mother asus rog strix B550-f.jpg" alt="imgmothers">
-                    <p>mother asus rog strix B550-f </p>
-                    <p class="precio">$199.99</p>
-                    <button class="boton-compra">Comprar</button>
-                </div>
-
-                <div>
-                    <img src="../resources/images/mother gigabyte X570SI.jpg" alt="imgmothers">
-                    <p>mother gigabyte X570SI </p>
-                    <p class="precio">$199.99</p>
-                    <button class="boton-compra">Comprar</button>
-                </div>
+            <div class="productos__grid__procesador2">
+                <h4>AMD Ryzen 5 5600g</h4><img src="../resources/images/ryzen 5 5600g.jpg" alt="AMD Ryzen 5 5600g">
+                <h3>Precio: $45.000</h3>
             </div>
-
-            <!-- PLACAS -->
-
-            <div>
-                <div>
-                    <img src="../resources/images/Placa de Video ASUS GeForce GTX 1660 SUPER.jpg" alt=" imgplacas">
-                    <p>Placa de Video ASUS GeForce GTX 1660 SUPER </p>
-                    <p class="precio">$199.99</p>
-                    <button class="boton-compra">Comprar</button>
-                </div>
-
-                <div>
-                    <img src="../resources/images/Placa de Video ASUS GeForce RTX 3070.jpg" alt="imgplacas">
-                    <p>Placa de Video ASUS GeForce RTX 3070 </p>
-                    <p class="precio">$199.99</p>
-                    <button class="boton-compra">Comprar</button>
-                </div>
-
-                <div>
-                    <img src="../resources/images/Placa de Video Zotac GeForce RTX 3070 Ti.jpg" alt="imgplacas">
-                    <p>Placa de Video Zotac GeForce RTX 3070 Ti </p>
-                    <p class="precio">$199.99</p>
-                    <button class="boton-compra">Comprar</button>
-                </div>
-
+            <div class="productos__grid__procesador3">
+                <h4>AMD Ryzen 7 5700g</h4><img src="../resources/images/ryzen 7 5700g.jpg" alt="AMD Ryzen 7 5700g">
+                <h3>Precio: $75.000</h3>
             </div>
-
-            <!-- DISCOS -->
-
-            <div>
-                <div>
-                    <img src="../resources/images/Disco Sólido SSD M.2 Kingston 1TB NV2 3500MB.s NVME PCI-E 4x.jpg" alt="imgdiscos">
-                    <p>Disco Sólido SSD M.2 Kingston 1TB NV2 3500MB.s NVME PCI-E 4x</p>
-                    <p class="precio">$199.99</p>
-                    <button class="boton-compra">Comprar</button>
-
-                </div>
-
-                <div>
-                    <img src="../resources/images/Disco Sólido SSD M.2 ADATA 1TB XPG Spectrix S40G RGB 3500MB.s NVMe PCI-E X4.jpg"
-                        alt="imgdiscos">
-                    <p>Disco Sólido SSD M.2 ADATA 1TB XPG Spectrix S40G RGB 3500MB.s NVMe PCI-E X4 </p>
-                    <p class="precio">$199.99</p>
-                    <button class="boton-compra">Comprar</button>
-                </div>
-
-                <div>
-                    <img src="../resources/images/Disco Solido SSD M.2 Team 2TB Cardea Zero Z440 5000MB.s PCIe Gen40.jpg"
-                        alt="imgdiscos">
-                    <p>Disco Solido SSD M.2 Team 2TB Cardea Zero Z440 5000MB.s PCIe Gen40 </p>
-                    <p class="precio">$199.99</p>
-                    <button class="boton-compra">Comprar</button>
-                </div>
+            <div class="productos__grid__procesador4">
+                <h4>Intel I9 10900</h4><img src="../resources/images/procesador_4.svg" alt="Intel I9 10900">
+                <h3>Precio: $75.000</h3>
             </div>
 
             <!-- RAMS -->
 
-            <div>
-                <div>
-                    <img src="../resources/images/Memoria Corsair DDR4 16GB (2x8GB) 2666MHz Vengeance RGB PRO White.jpg"
-                        alt=" imgrams">
-                    <p>Memoria Corsair DDR4 16GB (2x8GB) 2666MHz Vengeance RGB PRO White </p>
-                    <p class="precio">$199.99</p>
-                    <button class="boton-compra">Comprar</button>
-                </div>
-
-                <div>
-                    <img src="../resources/images/Memoria Corsair DDR4 16GB (2x8GB) 3200MHz Vengeance RGB PRO TUF Gaming.jpg"
-                        alt="imgrams">
-                    <p>Memoria Corsair DDR4 16GB (2x8GB) 3200MHz Vengeance RGB PRO TUF Gaming </p>
-                    <p class="precio">$199.99</p>
-                    <button class="boton-compra">Comprar</button>
-                </div>
-                <div>
-                    <img src="../resources/images/Memoria Adata DDR4 16GB (2x8GB) 4133MHz XPG Spectrix D60G RGB.jpg" alt="imgrams">
-                    <p>Memoria Adata DDR4 16GB (2x8GB) 4133MHz XPG Spectrix D60G RGB.jpg </p>
-                    <p class="precio">$199.99</p>
-                    <button class="boton-compra">Comprar</button>
-                </div>
+            <h3 class="productos__grid__titulo__ram">Ram</h3>
+            <div class="productos__grid__ram1">
+                <h4>Disco SSD M.2 1TB Kingston</h4><img
+                    src="../resources/images/Disco Sólido SSD M.2 Kingston 1TB NV2 3500MB.s NVME PCI-E 4x.jpg"
+                    alt="Disco SSD M.2 1TB">
+                <h3>Precio: $26.000</h3>
+            </div>
+            <div class="productos__grid__ram2">
+                <h4>Disco SSD M.2 1TB XPG</h4><img
+                    src="../resources/images/Disco Sólido SSD M.2 ADATA 1TB XPG Spectrix S40G RGB 3500MB.s NVMe PCI-E X4.jpg"
+                    alt="Disco SSD M.2 1TB XPG">
+                <h3>Precio: $16.000</h3>
+            </div>
+            <div class="productos__grid__ram3">
+                <h4>Disco SSD M.2 2TB Cardea Zero</h4><img
+                    src="../resources/images/Disco Solido SSD M.2 Team 2TB Cardea Zero Z440 5000MB.s PCIe Gen40.jpg"
+                    alt="Disco SSD M.2 2TB Cardea Zero">
+                <h3>Precio: $30.000</h3>
+            </div>
+            <div class="productos__grid__ram4">
+                <h4>Andromedi ddr5 16gb</h4><img src="../resources/images/ram_4.svg" alt="Andromedi ddr5 16gb">
+                <h3>Precio: $30.000</h3>
             </div>
 
-            <!-- FUENTES -->
+            <!-- PLACAS DE VIDEO -->
 
-            <div>
-                <div>
-                    <img src="../resources/images/Fuente ADATA 750W XPG PYLON 80 Plus Bronze.jpg" alt="imgfuentes">
-                    <p>Fuente ADATA 750W XPG PYLON 80 Plus Bronze</p>
-                    <p class="precio">$199.99</p>
-                    <button class="boton-compra">Comprar</button>
-                </div>
+            <h3 class="productos__grid__titulo__placasDeVideo">Placas de video</h3>
+            <div class="productos__grid__placaDeVideo1">
+                <h4>Asus GTX 1660 super </h4><img
+                    src="../resources/images/Placa de Video ASUS GeForce GTX 1660 SUPER.jpg" alt="Asus GTX 1660 super">
+                <h3>Precio: $82.000</h3>
+            </div>
+            <div class="productos__grid__placaDeVideo2">
+                <h4>Asus Geforce RTX 3070</h4><img src="../resources/images/Placa de Video ASUS GeForce RTX 3070.jpg"
+                    alt="Asus Geforce RTX 3070">
+                <h3>Precio: $100.000</h3>
+            </div>
+            <div class="productos__grid__placaDeVideo3">
+                <h4>Zotac Geforce RTX 3070 TI</h4><img
+                    src="../resources/images/Placa de Video Zotac GeForce RTX 3070 Ti.jpg"
+                    alt="Zotac Geforce RTX 3070 TI">
+                <h3>Precio: $168.000</h3>
+            </div>
+            <div class="productos__grid__placaDeVideo4">
+                <h4>GigaByte 4090 GTX</h4><img src="../resources/images/placa_madre_4.svg" alt="GigaByte 4090 GTX">
+                <h3>Precio: $168.000</h3>
+            </div>
 
-                <div>
-                    <img src="../resources/images/Fuente MSI 850W 80 Plus Gold Full Modular MPG A850GF.jpg" 0 alt="imgfuentes">
-                    <p>Fuente MSI 850W 80 Plus Gold Full Modular MPG A850GF</p>
-                    <p class="precio">$199.99</p>
-                    <button class="boton-compra">Comprar</button>
-                </div>
+            <!-- FUENTES DE ALIMENTACION -->
 
-                <div>
-                    <img src="../resources/images/Fuente ASUS ROG STRIX 1000W 80 Plus Gold Full Modular 1000G.jpg" 0
-                        alt="imgfuentes">
-                    <p>Fuente ASUS ROG STRIX 1000W 80 Plus Gold Full Modular 1000G </p>
-                    <p class="precio">$199.99</p>
-                    <button class="boton-compra">Comprar</button>
-                </div>
+            <h3 class="productos__grid__titulo__fuentesDeAlimentacion">Fuentes de Alimentacón</h3>
+            <div class="productos__grid__fuenteDeAlimentacion1">
+                <h4>Fuente ADATA 750W</h4><img src="../resources/images/Fuente ADATA 750W XPG PYLON 80 Plus Bronze.jpg"
+                    alt="Fuente ADATA 750W">
+                <h3>Precio: $58.000</h3>
+            </div>
+            <div class="productos__grid__fuenteDeAlimentacion2">
+                <h4>Fuente MSI 850W</h4><img
+                    src="../resources/images/Fuente MSI 850W 80 Plus Gold Full Modular MPG A850GF.jpg"
+                    alt="Fuente MSI 850W">
+                <h3>Precio: $30.000</h3>
+            </div>
+            <div class="productos__grid__fuenteDeAlimentacion3">
+                <h4>Fuente ASUS 1000W</h4><img
+                    src="../resources/images/Fuente ASUS ROG STRIX 1000W 80 Plus Gold Full Modular 1000G.jpg"
+                    alt="Fuente ASUS 1000W">
+                <h3>Precio: $40.000</h3>
+            </div>
+            <div class="productos__grid__fuenteDeAlimentacion4">
+                <h4>Focus 1100W 80P platinum</h4><img src="../resources/images/fuente_de_alimentacion_4.svg"
+                    alt="Focus 1100W 80P platinum">
+                <h3>Precio: $40.000</h3>
             </div>
 
             <!-- GABINETES -->
 
-            <div>
-                <div>
-                    <img src="../resources/images/Gabinete_Cooler_Master_HAF_700_EVO_ARGB_Vidrio_Templado_E-ATX_Black_abc54419-grn.jpg"
-                        alt=" imggabinetes">
-                    <p>Gabinete Cooler Master HAF 700 EVO ARGB Vidrio Templado E-ATX Black</p>
-                    <p class="precio">$199.99</p>
-                    <button class="boton-compra">Comprar</button>
-                </div>
-
-                <div>
-                    <img src="../resources/images/Gabinete Antec Torque Black.White ARGB Vidrio Templado.jpg" 0 alt="imggabinetes">
-                    <p>Gabinete Antec Torque Black.White ARGB Vidrio Templado </p>
-                    <p class="precio">$199.99</p>
-                    <button class="boton-compra">Comprar</button>
-                </div>
-
-                <div>
-                    <img src="../resources/images/Gabinete Antec Torque ARGB Vidrio Templado.jpg" 0 alt="imggabinetes">
-                    <p>Gabinete Antec Torque ARGB Vidrio Templado </p>
-                    <p class="precio">$199.99</p>
-                    <button class="boton-compra">Comprar</button>
-                </div>
+            <h3 class="productos__grid__titulo__gabinetes">Gabinetes</h3>
+            <div class="productos__grid__gabinete1">
+                <h4>Gabinete Cooler Master</h4><img
+                    src="../resources/images/Gabinete_Cooler_Master_HAF_700_EVO_ARGB_Vidrio_Templado_E-ATX_Black_abc54419-grn.jpg"
+                    alt="Gabinete Cooler Master">
+                <h3>Precio: $25.000</h3>
+            </div>
+            <div class="productos__grid__gabinete2">
+                <h4>Gabinete Antec Torque White ARGB</h4><img
+                    src="../resources/images/Gabinete Antec Torque Black.White ARGB Vidrio Templado.jpg"
+                    alt="Gabinete Antec Torque White ARGB">
+                <h3>Precio: $41.000</h3>
+            </div>
+            <div class="productos__grid__gabinete3">
+                <h4>Gabinete Antec Torque Black ARGB</h4><img
+                    src="../resources/images/Gabinete Antec Torque ARGB Vidrio Templado.jpg"
+                    alt="Gabinete Antec Torque Black ARGB">
+                <h3>Precio: $46.000</h3>
+            </div>
+            <div class="productos__grid__gabinete4">
+                <h4>Asus 5 coolers black rgb</h4><img src="../resources/images/gabinete_4.svg"
+                    alt="Asus 5 coolers black rgb">
+                <h3>Precio: $46.000</h3>
             </div>
 
-            <!--PERIFERICOS -->
+            <!-- PERIFERICOS -->
 
-            <div>
-                <div>
-                    <img src="../resources/images/Auriculares Inalambricos Logitech G733 Lightspeed RGB White.jpg"
-                        alt="imgperifericos">
-                    <p>Auriculares Inalambricos Logitech G733 Lightspeed RGB White</p>
-                    <p class="precio">$199.99</p>
-                    <button class="boton-compra">Comprar</button>
-                </div>
-
-                <div>
-                    <img src="../resources/images/Mouse_Logitech_G502X_Plus_White_Lightforce_Hero_25K_Wireless_RGB_b96064b9-grn.jpg"
-                        alt="imgperifericos">
-                    <p>Mouse Logitech G502XPlus White Lightforce Hero 25K Wireless RGB </p>
-                    <p class="precio">$199.99</p>
-                    <button class="boton-compra">Comprar</button>
-                </div>
-
-                <div>
-                    <img src="../resources/images/Teclado Logitech Aurora G713 White RGB.jpg" 0 alt="imgperifericos">
-                    <p>Teclado Logitech Aurora G713 White RGB </p>
-                    <p class="precio">$199.99</p>
-                    <button class="boton-compra">Comprar</button>
-                </div>
+            <h3 class="productos__grid__titulo__perifericos">Perifericos</h3>
+            <div class="productos__grid__mouse1">
+                <h4>Logitech G502Xplus</h4><img
+                    src="../resources/images/Mouse_Logitech_G502X_Plus_White_Lightforce_Hero_25K_Wireless_RGB_b96064b9-grn.jpg"
+                    alt="Logitech G502Xplus">
+                <h3>Precio: $5.000</h3>
+            </div>
+            <div class="productos__grid__mouse2">
+                <h4>Logitech G502 hero</h4><img src="../resources/images/Logitech G502 Hero.svg"
+                    alt="Logitech G502 hero">
+                <h3>Precio: $12.000</h3>
+            </div>
+            <div class="productos__grid__teclado1">
+                <h4>Redragon mecanico 942S</h4><img src="../resources/images/Redragon Mecanico 942s.svg"
+                    alt="Redragon mecanico 942S">
+                <h3>Precio: $14.000</h3>
+            </div>
+            <div class="productos__grid__teclado2">
+                <h4>Logitech Aurora G713</h4><img src="../resources/images/Teclado Logitech Aurora G713 White RGB.jpg"
+                    alt="Logitech Aurora G713">
+                <h3>Precio: $23.000</h3>
+            </div>
+            <div class="productos__grid__monitor1">
+                <h4>Samsung Led 1080p 60hrz</h4><img src="../resources/images/monitor_1.svg"
+                    alt="Samsung Led 1080p 60hrz">
+                <h3>Precio: $35.000</h3>
+            </div>
+            <div class="productos__grid__monitor2">
+                <h4>Philips 1080p 120hrz curvo</h4><img src="../resources/images/monitor_2.svg"
+                    alt="Philips 1080p 120hrz curvo">
+                <h3>Precio: $60.000</h3>
+            </div>
+            <div class="productos__grid__monitor3">
+                <h4>Samsung 1080p 144hrz curvo</h4><img src="../resources/images/monitor_3.svg"
+                    alt="Samsung 1080p 144hrz curvo">
+                <h3>Precio: $70.000</h3>
+            </div>
+            <div class="productos__grid__monitor4">
+                <h4>LG 1080p 240hrz</h4><img src="../resources/images/monitor_4.svg" alt="LG 1080p 240hrz">
+                <h3>Precio: $120.000</h3>
+            </div>
+            <div class="productos__grid__camara1">
+                <h4>Camara Logitech 5483fc</h4><img src="../resources/images/camara_1.svg" alt="Camara Logitech 5483fc">
+                <h3>Precio: $3.400</h3>
+            </div>
+            <div class="productos__grid__mousePad1">
+                <h4>Mouse pad Logitech 203d3u</h4><img src="../resources/images/mouse_pad_1.svg"
+                    alt="Mouse pad Logitech 203d3u">
+                <h3>Precio: $3.000</h3>
+            </div>
+            <div class="productos__grid__antena1">
+                <h4>Antena Noga 18ll293</h4><img src="../resources/images/antena_1.svg" alt="Antena Noga 18ll293">
+                <h3>Precio: $2.200</h3>
+            </div>
+            <div class="productos__grid__pendrive1">
+                <h4>Pendrive Kingston 64gb</h4><img src="../resources/images/pendrive_1.svg"
+                    alt="Pendrive Kingston 64gb">
+                <h3>Precio: $2.700</h3>
             </div>
         </aside>
     </main>
-    <footer class="footer">
-        <h3>Pc Planet - Todos los derechos reservados </h3>
+    <footer>
+        <!-- Marca -->
+        <span class="footer__marca wow animate__animated animate__backInLeft">Pc Planet</span>
+        <!-- Parrafo -->
+        <p class="footer__parrafo">Para consultas o reportar inconvenientes, contáctenos vía redes sociales o complete
+            el formulario y nos pondremos en contacto con usted</p>
+        <div class="footer__grid__redes">
+            <!-- Redes -->
+            <a href="http://www.whatsapp.com" class="footer__logo__whatsapp"><img
+                    src="../resources/images/icono_whatsapp.svg" alt="logo"></a>
+            <a href="http://www.instagram.com" class="footer__logo__instagram"><img
+                    src="../resources/images/icono_instagram.svg" alt="logo"></a>
+            <a href="http://www.facebook.com" class="footer__logo__facebook"><img
+                    src="../resources/images/icono_facebook.svg" alt="logo"></a>
+            <a href="http://www.twitter.com" class="footer__logo__twitter"><img
+                    src="../resources/images/icono_twitter.svg" alt="logo"></a>
+        </div>
     </footer>
 </body>
 

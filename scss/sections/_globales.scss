@@ -21,7 +21,7 @@ body {
 }
 
 header,
-footer{
+footer {
     z-index: 1;
 }
 
@@ -66,15 +66,18 @@ footer{
         flex-wrap: wrap;
         justify-content: space-between;
         list-style: none;
+
         li {
             display: flex;
             align-items: center;
             justify-content: center;
             list-style: none;
             height: 50px;
+
             .active {
                 background-color: #b7f7d4;
             }
+
             a {
                 display: flex;
                 align-items: center;
@@ -89,11 +92,13 @@ footer{
                 font-size: 25px;
                 padding: 5px;
             }
+
             a:hover {
                 background-color: #cde8d9;
                 box-shadow: 0 4px 16px #67e09e;
                 transition: all 0.6s ease;
             }
+
             a:active {
                 background-color: #48a672;
                 color: white;
@@ -110,16 +115,46 @@ footer{
 /* Footer */
 
 
-.footer {
-    min-height: 80px;
+footer {
+    background-color: #a6e9c5;
+    height: 25vh;
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+footer a img {
+    height: 70px;
+    width: 70px;
+}
+
+.footer__grid__redes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    margin: 8px 0px 0px 0px;
+}
+
+.footer__marca {
     display: flex;
+    font-size: 60px;
+    font-style: italic;
     align-items: center;
     justify-content: center;
-    box-shadow: 2px -2px 15px 0 rgba(0, 0, 0, 0.5);
-    background-color: $color-header-footer;
-    color: #060611;
-    font-family: $font-family;
-    margin-top: 25px;
+    width: 35vw;
+    font-family: none;
+    color: black;
+}
+
+.footer__parrafo {
+    margin: 20px;
+    font-size: 25px;
+    font-family: 'Mulish', sans-serif;
+    display: flex;
+    align-items: center;
+    color: black;
 }
 
 
@@ -131,7 +166,7 @@ footer{
 .animate__animated {
     --animate-duration: 0.8s;
     --animate-delay: 0.5s;
-  }
+}
 
 /* Fin animaciones */
 

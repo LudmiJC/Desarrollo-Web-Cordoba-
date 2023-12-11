@@ -79,7 +79,7 @@ footer {
   color: black;
   box-shadow: 3px 3px 11px 0 rgba(0, 0, 0, 0.5);
   background-color: #E4FFF0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Mulish', sans-serif;
   height: 40px;
   border: 2px #80bb9b solid;
   font-size: 25px;
@@ -100,17 +100,48 @@ footer {
 
 /* // Header // */
 /* Footer */
-.footer {
-  min-height: 80px;
+footer {
+  background-color: #a6e9c5;
+  height: 25vh;
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+footer a img {
+  height: 70px;
+  width: 70px;
+}
+
+.footer__grid__redes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  margin: 8px 0px 0px 0px;
+}
+
+.footer__marca {
+  display: flex;
+  font-size: 60px;
+  font-style: italic;
+  align-items: center;
+  justify-content: center;
+  width: 35vw;
+  font-family: none;
+  color: black;
+}
+
+.footer__parrafo {
+  margin: 20px;
+  font-size: 25px;
+  font-family: 'Mulish', sans-serif;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  box-shadow: 2px -2px 15px 0 rgba(0, 0, 0, 0.5);
-  background-color: #a6e9c5;
-  color: #060611;
-  font-family: "Roboto", sans-serif;
-  margin-top: 25px;
+  color: black;
 }
+
 
 /* Footer */
 /* Animaciones */
@@ -143,7 +174,7 @@ footer {
 
 .index__section__titulo {
   color: #060611;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Mulish', sans-serif;
   font-weight: 300;
   font-size: 40px;
   text-align: center;
@@ -151,7 +182,7 @@ footer {
 
 .index__section__subtitulo {
   color: #060611;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Mulish', sans-serif;
   font-weight: 300;
   font-size: 40px;
   text-align: center;
@@ -163,7 +194,7 @@ footer {
   text-align: center;
   font-weight: 200;
   color: #060611;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Mulish', sans-serif;
 }
 
 .index__section__video {
@@ -180,7 +211,7 @@ footer {
 
 .armatupc__main__section {
   margin: 30px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Mulish', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -210,6 +241,177 @@ footer {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.armatupc__section__flex {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  align-content: center;
+  margin: 20px;
+}
+
+.armatupc__article__flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.armatupc__main__titulo {
+  width: 65vw;
+  margin: 30px;
+  font-family: 'Mulish', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.armatupc__article__subtitulo {
+  font-size: 30px;
+  width: 75vw;
+  font-family: 'Mulish', sans-serif;
+  margin: 30px 0px 0px 0px;
+}
+
+.armatupc__article__parrafo {
+  height: 120px;
+  width: 65vw;
+  font-size: 25px;
+  font-family: 'Mulish', sans-serif;
+  margin: 5px 0px 0px 0px;
+}
+
+.armatupc__aside__form {
+  font-size: 15px;
+  font-family: 'Mulish', sans-serif;
+  margin: 0 0 40px 0;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #d7fbe8;
+  border: 2px solid #BAE6CF;
+  box-shadow: 3px 3px 11px 0 rgba(0, 0, 0, 0.5);
+}
+
+.armatupc__aside__datosUsuario {
+  display: flex;
+  justify-content: space-between;
+  width: 900px;
+  height: 40px;
+  margin: 20px 0px 0px 0px;
+}
+
+.armatupc__aside__datosUsuario input {
+  text-align: center;
+}
+
+.armatupc__aside__selectComponentes {
+  display: flex;
+  width: 800px;
+  height: 160px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-between;
+  text-align: center;
+  margin: 0px 0px 20px 0px;
+}
+
+.armatupc__aside__botones {
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+  height: 50px;
+  margin: 0px 0px 20px 0px;
+}
+
+.armatupc__aside__nombre {
+  font-size: 20px;
+  font-family: 'Mulish', sans-serif;
+  width: 270px;
+  margin: 0px 0px 0px 0px;
+}
+
+.armatupc__aside__telefono {
+  font-size: 20px;
+  font-family: 'Mulish', sans-serif;
+  width: 270px;
+}
+
+.armatupc__aside__email {
+  font-size: 20px;
+  font-family: 'Mulish', sans-serif;
+  width: 270px;
+}
+
+.armatupc__aside__select {
+  font-size: 18px;
+  font-family: 'Mulish', sans-serif;
+  width: 350px;
+  height: 40px;
+  text-align: center;
+}
+
+.armatupc__aside__select__pais {
+  font-size: 18px;
+  font-family: 'Mulish', sans-serif;
+  text-align: center;
+  width: 350px;
+  height: 40px;
+  margin: 0px 0px 30px 0px;
+}
+
+.armatupc__aside__comprar {
+  font-size: 15px;
+  font-family: 'Mulish', sans-serif;
+  background-color: #d7fbe8;
+  border: 2px solid #BAE6CF;
+  box-shadow: 3px 3px 11px 0 rgba(0, 0, 0, 0.5);
+  width: 120px;
+  height: 50px;
+}
+
+.armatupc__aside__comprar :hover {
+  color: #1d0000;
+  box-shadow: 0 4px 16px #dba5a5;
+  transition: all 0.2s ease;
+}
+
+.armatupc__aside__comprar :active {
+  background-color: #fd6868;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.armatupc__aside__restablecer {
+  font-size: 15px;
+  font-family: 'Mulish', sans-serif;
+  background-color: #d7fbe8;
+  border: 2px solid #BAE6CF;
+  box-shadow: 3px 3px 11px 0 rgba(0, 0, 0, 0.5);
+  margin: 0px 0px 0px 0px;
+  width: 120px;
+  height: 50px;
+}
+
+.armatupc__aside__restablecer :hover {
+  color: #1d0000;
+  box-shadow: 0 4px 16px #dba5a5;
+  transition: all 0.2s ease;
+}
+
+.armatupc__aside__restablecer :active {
+  background-color: #fd6868;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.armatupc__article__imagen {
+  width: 60vh;
+  height: auto;
 }
 
 .carousel-item img {
@@ -245,7 +447,7 @@ footer {
     "mapa__contacto formulario__contacto"
     "mapa__contacto formulario__contacto";
   background-color: #E4FFF0;
-  height: 80vh;
+
   padding: 30px 0 30px 0;
 }
 
@@ -266,14 +468,13 @@ footer {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  padding: 20px;
   align-items: center;
   height: 200px;
 }
 
 .contacto__section__titulo {
   color: #060611;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Mulish', sans-serif;
   font-weight: 300;
   font-size: 40px;
   text-align: center;
@@ -282,7 +483,7 @@ footer {
 
 .contacto__section__subtitulo {
   color: #060611;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Mulish', sans-serif;
   font-weight: 300;
   font-size: 40px;
   text-align: center;
@@ -291,7 +492,7 @@ footer {
 
 .contacto__section__parrafo {
   color: #060611;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Mulish', sans-serif;
   font-weight: 300;
   font-size: 30px;
   text-align: center;
@@ -318,7 +519,7 @@ footer {
 }
 
 .contacto__main__form label {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Mulish', sans-serif;
   font-size: 30px;
   margin: 10px 0 5px 0;
 }
@@ -327,14 +528,14 @@ footer {
   width: 280px;
   height: 100px;
   margin: 15px 0 10px 0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Mulish', sans-serif;
   text-align: center;
 }
 
 .contacto__main__form input {
   width: 280px;
   height: 35px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Mulish', sans-serif;
   text-align: center;
 }
 
@@ -346,7 +547,7 @@ footer {
 
 .contacto__form__buttons button {
   background-color: white;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Mulish', sans-serif;
   height: 50px;
   width: 120px;
   border: 1px black ridge;
@@ -356,116 +557,310 @@ footer {
 
 /* FIN Aside */
 /* // Contacto // */
+
+
 /* productos */
-.productos__main {
-  background-color: #E4FFF0;
+.productos__main__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr;
+  justify-items: center;
 }
 
-.productos__section__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 35px 0;
-  height: 500px;
+.productos__article {
+  margin: 30px 0px 0px 0px;
 }
 
-.productos__section__titulo {
-  color: #060611;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
+.productos__titulo {
   font-size: 40px;
-  text-align: center;
-  margin: 30px 0 10px 0;
+  font-family: 'Mulish', sans-serif;
 }
 
-.productos__section__subtitulo {
-  color: #060611;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-size: 40px;
-  text-align: center;
-  margin: 0 50px 0;
-}
-
-.productos__aside {
-  color: #060611;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-size: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.productos__aside div {
-  color: #060611;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-size: 20px;
-  display: flex;
-  justify-content: space-evenly;
-  margin: 10px 0 10px 0;
-}
-
-.productos__aside div div {
-  color: #060611;
-  font-family: "Roboto", sans-serif;
-  font-weight: 200;
-  font-size: 15px;
-  display: flex;
-  flex-direction: column;
-  width: 200px;
-  height: 300px;
-}
-
-.productos__aside div div img {
-  width: 200px;
+.productos__parrafo {
   height: 200px;
+  width: 900px;
+  font-size: 30px;
+  font-family: 'Mulish', sans-serif;
+}
+
+.productos__aside__grid {
+  display: grid;
+  width: 70%;
+  height: auto;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 55px 1fr 1fr 55px 1fr 1fr 55px 1fr 1fr 55px 1fr 1fr 1fr;
+  grid-template-areas: "titulo__placasMadres titulo__placasMadres titulo__procesadores titulo__procesadores"
+    "placaMadre1 placaMadre2 procesador1 procesador2"
+    "placaMadre3 placaMadre4 procesador3 procesador4"
+    "titulo__ram titulo__ram titulo__placasDeVideo titulo__placasDeVideo"
+    "ram1 ram2 placaDeVideo1 placaDeVideo2"
+    "ram3 ram4 placaDeVideo3 placaDeVideo4"
+    "titulo__fuentesDeAlimentacion titulo__fuentesDeAlimentacion titulo__gabinetes titulo__gabinetes"
+    "fuenteDeAlimentacion1 fuenteDeAlimentacion2 gabinete1 gabinete2"
+    "fuenteDeAlimentacion3 fuenteDeAlimentacion4 gabinete3 gabinete4"
+    "titulo__perifericos titulo__perifericos titulo__perifericos titulo__perifericos"
+    "mouse1 mouse2 teclado1 teclado2"
+    "monitor1 monitor2 monitor3 monitor4"
+    "camara1 mousePad1 antena1 pendrive1";
+  align-items: center;
+  justify-items: center;
+}
+
+.productos__aside__grid div {
+  background-color: #d7fbe8;
+  border: 2px solid #BAE6CF;
+  box-shadow: 3px 3px 11px 0 rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-self: stretch;
+  justify-self: stretch;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 15px;
+  font-family: 'Mulish', sans-serif;
+  font-size: 20px;
+  flex-direction: column;
+}
+
+.productos__aside__grid div img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.productos__aside__grid :hover {
+  background-color: #d7fbe8;
+  border: 2px solid #BAE6CF;
+  box-shadow: 3px 3px 11px 0 rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease;
+}
+
+.productos__aside__grid :active {
+  background-color: #d7fbe8;
+  border: 2px solid #BAE6CF;
+  box-shadow: 3px 3px 11px 0 rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease;
+}
+
+.productos__grid__titulo__placasMadres {
+  grid-area: titulo__placasMadres;
+  font-size: 30px;
+  font-family: 'Mulish', sans-serif;
+}
+
+.productos__grid__placaMadre1 {
+  grid-area: placaMadre1;
+}
+
+.productos__grid__placaMadre2 {
+  grid-area: placaMadre2;
+}
+
+.productos__grid__placaMadre3 {
+  grid-area: placaMadre3;
+}
+
+.productos__grid__placaMadre4 {
+  grid-area: placaMadre4;
+}
+
+.productos__grid__titulo__procesadores {
+  grid-area: titulo__procesadores;
+  font-size: 30px;
+  font-family: 'Mulish', sans-serif;
+}
+
+.productos__grid__procesador1 {
+  grid-area: procesador1;
+}
+
+.productos__grid__procesador2 {
+  grid-area: procesador2;
+}
+
+.productos__grid__procesador3 {
+  grid-area: procesador3;
+}
+
+.productos__grid__procesador4 {
+  grid-area: procesador4;
+}
+
+.productos__grid__titulo__ram {
+  grid-area: titulo__ram;
+  font-size: 30px;
+  font-family: 'Mulish', sans-serif;
+}
+
+.productos__grid__ram1 {
+  grid-area: ram1;
+}
+
+.productos__grid__ram2 {
+  grid-area: ram2;
+}
+
+.productos__grid__ram3 {
+  grid-area: ram3;
+}
+
+.productos__grid__ram4 {
+  grid-area: ram4;
+}
+
+.productos__grid__titulo__placasDeVideo {
+  grid-area: titulo__placasDeVideo;
+  font-size: 30px;
+  font-family: 'Mulish', sans-serif;
+}
+
+.productos__grid__placaDeVideo1 {
+  grid-area: placaDeVideo1;
+}
+
+.productos__grid__placaDeVideo2 {
+  grid-area: placaDeVideo2;
+}
+
+.productos__grid__placaDeVideo3 {
+  grid-area: placaDeVideo3;
+}
+
+.productos__grid__placaDeVideo4 {
+  grid-area: placaDeVideo4;
+}
+
+.productos__grid__titulo__fuentesDeAlimentacion {
+  grid-area: titulo__fuentesDeAlimentacion;
+  font-size: 30px;
+  font-family: 'Mulish', sans-serif;
+}
+
+.productos__grid__fuenteDeAlimentacion1 {
+  grid-area: fuenteDeAlimentacion1;
+}
+
+.productos__grid__fuenteDeAlimentacion2 {
+  grid-area: fuenteDeAlimentacion2;
+}
+
+.productos__grid__fuenteDeAlimentacion3 {
+  grid-area: fuenteDeAlimentacion3;
+}
+
+.productos__grid__fuenteDeAlimentacion4 {
+  grid-area: fuenteDeAlimentacion4;
+}
+
+.productos__grid__titulo__gabinetes {
+  grid-area: titulo__gabinetes;
+  font-size: 30px;
+  font-family: 'Mulish', sans-serif;
+}
+
+.productos__grid__gabinete1 {
+  grid-area: gabinete1;
+}
+
+.productos__grid__gabinete2 {
+  grid-area: gabinete2;
+}
+
+.productos__grid__gabinete3 {
+  grid-area: gabinete3;
+}
+
+.productos__grid__gabinete4 {
+  grid-area: gabinete4;
+}
+
+.productos__grid__titulo__perifericos {
+  grid-area: titulo__perifericos;
+  font-size: 30px;
+  font-family: 'Mulish', sans-serif;
+}
+
+.productos__grid__mouse1 {
+  grid-area: mouse1;
+}
+
+.productos__grid__mouse2 {
+  grid-area: mouse2;
+}
+
+.productos__grid__teclado1 {
+  grid-area: teclado1;
+}
+
+.productos__grid__teclado2 {
+  grid-area: teclado2;
+}
+
+.productos__grid__monitor1 {
+  grid-area: monitor1;
+}
+
+.productos__grid__monitor2 {
+  grid-area: monitor2;
+}
+
+.productos__grid__monitor3 {
+  grid-area: monitor3;
+}
+
+.productos__grid__monitor4 {
+  grid-area: monitor4;
+}
+
+.productos__grid__camara1 {
+  grid-area: camara1;
+}
+
+.productos__grid__mousePad1 {
+  grid-area: mousePad1;
+}
+
+.productos__grid__antena1 {
+  grid-area: antena1;
+}
+
+.productos__grid__pendrive1 {
+  grid-area: pendrive1;
 }
 
 /* // productos */
 /* trayectoria */
-.trayectoria__main {
-  flex-grow: 1;
-  background-color: #E4FFF0;
-  display: flex;
-  justify-content: space-evenly;
-  padding: 30px 0 30px 0;
-  /*1er num arriba, 2do num derecha, 3er num abajo, 4to num izquierdo */
-  position: relative;
+.trayectoria__article__titulo {
+  width: 45vw;
+  font-size: 35px;
+  font-family: 'Mulish', sans-serif;
+  margin: 30px 0px 0px 30px;
 }
 
-.trayectoria__main__section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-
-.trayectoria__section__container {
-  margin: 20px 0;
-}
-
-.trayectoria__section__titulo {
-  color: #060611;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-size: 40px;
-  text-align: center;
-}
-
-.trayectoria__section__parrafo {
-  margin: 25px 0;
-  width: 600px;
+.trayectoria__article__parrafo {
   height: auto;
-  text-align: center;
-  font-weight: 200;
-  color: #060611;
-  font-family: "Roboto", sans-serif;
+  width: 35vw;
+  font-size: 25px;
+  font-family: 'Mulish', sans-serif;
+  margin: 5px 0px 20px 40px;
 }
 
-.trayectoria__section__img {
-  max-width: 100%;
+.trayectoria__main__flex {
+  display: flex;
+  margin: 0px 20px 0px 0px;
+}
+
+.trayectoria__aside__imagen {
+  width: 100%;
   height: auto;
+  margin: 50px 0px 50px 0px;
+  object-fit: contain;
+}
+
+.trayectoria__aside__flex {
+  display: flex;
+  justify-content: center;
+  margin: 0px 20px 0px 20px;
 }
 
 /* // trayectoria */
@@ -594,7 +989,7 @@ footer {
     width: 190px;
     height: 100px;
     margin: 15px 0 10px 0;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Mulish', sans-serif;
     text-align: center;
   }
 
@@ -606,7 +1001,7 @@ footer {
 
   .contacto__form__buttons button {
     background-color: white;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Mulish', sans-serif;
     height: 45px;
     width: 85px;
     border: 1px black ridge;
