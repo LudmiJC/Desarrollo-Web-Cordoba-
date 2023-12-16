@@ -3,25 +3,21 @@
 /* trayectoria */
 
 
-.trayectoria__main {
+.trayectoria__main__flex {
     flex-grow: 1;
     background-color: $color-fondo;
     display: flex;
     justify-content: space-evenly;
-    padding: 30px 0 30px 0; /*1er num arriba, 2do num derecha, 3er num abajo, 4to num izquierdo */
+    padding: 30px 0 30px 0;
+    /*1er num arriba, 2do num derecha, 3er num abajo, 4to num izquierdo */
     position: relative;
 }
 
-.trayectoria__main__section {
-    @include flex-align-column-center;
-    padding: 20px;
-}
-
-.trayectoria__section__container {
+.trayectoria__article__flex {
     margin: 20px 0;
 }
 
-.trayectoria__section__titulo {
+.trayectoria__article__titulo {
     color: #060611;
     font-family: $font-family;
     font-weight: 300;
@@ -29,7 +25,7 @@
     text-align: center;
 }
 
-.trayectoria__section__parrafo {
+.trayectoria__article__parrafo {
     margin: 25px 0;
     width: 600px;
     height: auto;
@@ -39,10 +35,15 @@
     font-family: $font-family;
 }
 
-.trayectoria__section__img {
-    max-width: 100%;
+.trayectoria__aside__flex {
+    margin: 30px;
+}
+
+.trayectoria__aside__imagen {
+    width: 100%;
     height: auto;
-    
+    margin: 30px;
+
 }
 
 
