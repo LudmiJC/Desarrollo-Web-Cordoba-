@@ -18,10 +18,6 @@
         text-align: center;
     }
 
-    .index__section__video {
-        width: 70vw;
-    }
-
     /* fin Index */
     /* PRODUCTOS*/
     .header__nav {
@@ -46,18 +42,9 @@
         }
     }
 
-    .productos__titulo {
-        font-size: 40px;
-        font-family: 'Mulish', sans-serif;
-        text-align: center;
-    }
 
     .productos__parrafo {
-        height: 200px;
-        width: auto;
-        font-size: 30px;
-        font-family: 'Mulish', sans-serif;
-        text-align: center;
+        font-size: 25px;
     }
 
     .productos__aside__grid {
@@ -92,10 +79,6 @@
         justify-items: center;
     }
 
-    .productos__aside__grid h3 {
-        margin: 30px 0;
-    }
-
     /* FIN PRODUCTOS*/
     /* arma tu pc*/
     .armatupc__main__flex {
@@ -109,13 +92,14 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
         margin: 0px 30px 0px 30px;
     }
 
     .armatupc__article__titulo {
         font-size: 30px;
         width: auto;
-        font-family: 'Mulish', sans-serif;
+        font-family: $font-family;
         margin: 30px 30px 0px 30px;
     }
 
@@ -123,7 +107,7 @@
         height: auto;
         width: auto;
         font-size: 25px;
-        font-family: 'Mulish', sans-serif;
+        font-family: $font-family;
         margin: 5px 0px 20px 0px;
     }
 
@@ -132,9 +116,10 @@
         height: auto;
     }
 
+    
     .armatupc__aside__form {
         font-size: 15px;
-        font-family: 'Mulish', sans-serif;
+        font-family: $font-family;
         margin: 40px 20px 40px 20px;
         padding: 0px 25px 0px 25px;
         width: auto;
@@ -152,10 +137,14 @@
     .armatupc__aside__datosUsuario {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         flex-direction: column;
-        width: 100%;
-        height: 110px;
-        margin: 20px 0px 0px 0px;
+        width: 95%;
+        height: 160px;
+        margin: 30px 0px 40px 0px;
+        input {
+            width:  85%;
+        }
     }
 
     .armatupc__aside__selectComponentes {
@@ -178,36 +167,41 @@
 
     .armatupc__aside__nombre {
         font-size: 20px;
-        font-family: 'Mulish', sans-serif;
+        font-family: $font-family;
         width: 100%;
         margin: 0px 0px 0px 0px;
     }
 
     .armatupc__aside__telefono {
         font-size: 20px;
-        font-family: 'Mulish', sans-serif;
+        font-family: $font-family;
         width: 100%;
     }
 
     .armatupc__aside__email {
         font-size: 20px;
-        font-family: 'Mulish', sans-serif;
+        font-family: $font-family;
         width: 100%;
     }
 
     .armatupc__section__flex {
         display: flex;
-        align-items: center;
         text-align: center;
         flex-direction: column;
-        align-content: center;
     }
 
-    .carousel-item img {
-        transition: transform 1s ease;
-        transform: scale(1);
-        height: auto;
-        width: 100%;
+
+    .armatupc__main__aside {
+        width: 70vw;
+        overflow: hidden;
+        margin: 35px;
+    }
+
+    .carousel-item {
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
 
     /* fin arma tu pc*/
@@ -233,7 +227,7 @@
     .trayectoria__article__titulo {
         width: 85%;
         font-size: 35px;
-        font-family: 'Mulish', sans-serif;
+        font-family: $font-family;
         margin: 20px 0px 5px 0px;
     }
 
@@ -242,7 +236,7 @@
         width: 85%;
         margin: 0px;
         font-size: 25px;
-        font-family: 'Mulish', sans-serif;
+        font-family: $font-family;
     }
 
     .trayectoria__aside__imagen {
@@ -264,13 +258,13 @@
         align-items: center;
         justify-content: center;
         grid-template-columns: 90%;
-        grid-template-rows: 20% 25% 25% 30%;
+        grid-template-rows: 30% 17% 25% 30%;
         grid-template-areas:
             "texto__contacto"
+            "mapa__contacto"
             "formulario__contacto"
-            "formulario__contacto"
-            "mapa__contacto";
-        height: auto;
+            "formulario__contacto";
+        height: 1300px;
     }
 
     .contacto__main__form {
@@ -290,8 +284,27 @@
     /* FIN Contacto */
 }
 
-footer {
-    height: auto;
+@media (max-width: 900px) {
+
+    footer {
+        background-color: #a6e9c5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: auto;
+        width: auto;
+    }
+
+    .footer__grid__redes {
+        display: grid;
+        width: 90%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+
 }
 
 @media (max-width: 720px) {
@@ -320,9 +333,6 @@ footer {
         }
     }
 
-    .index__section__video {
-        height: auto;
-    }
 
     /* PRODUCTOS*/
     .header__nav {
@@ -349,17 +359,8 @@ footer {
 
     .productos__titulo {
         font-size: 40px;
-        font-family: 'Mulish', sans-serif;
+        font-family: $font-family;
         text-align: center;
-    }
-
-    .productos__parrafo {
-        height: auto;
-        width: auto;
-        font-size: 30px;
-        font-family: 'Mulish', sans-serif;
-        text-align: center;
-        margin: 20px 20px 0 20px;
     }
 
     .productos__aside__grid {
@@ -394,17 +395,12 @@ footer {
         justify-items: center;
     }
 
-    .productos__aside__grid h3 {
-        margin: 30px 0;
-        text-align: center;
-    }
-
     /* FIN DE PRODUCTOS*/
 
     /* ARMA TU PC*/
     .armatupc__aside__form {
         font-size: 15px;
-        font-family: 'Mulish', sans-serif;
+        font-family: $font-family;
         margin: 40px 15px 40px 15px;
         padding: 0px 10px 0px 10px;
         width: 85vw;
@@ -419,14 +415,8 @@ footer {
         box-shadow: 3px 3px 11px 0 rgba(0, 0, 0, 0.5);
     }
 
-    .armatupc__aside__datosUsuario {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        width: 100%;
-        height: auto;
-        margin: 20px 40px 0px 40px;
-    }
+
+
 
     .armatupc__aside__selectComponentes {
         display: flex;
@@ -453,7 +443,7 @@ footer {
 
     .armatupc__aside__nombre {
         font-size: 20px;
-        font-family: 'Mulish', sans-serif;
+        font-family: $font-family;
         width: 100%;
         height: auto;
         margin: 0px 0px 10px 0px;
@@ -461,20 +451,20 @@ footer {
 
     .armatupc__aside__telefono {
         font-size: 20px;
-        font-family: 'Mulish', sans-serif;
+        font-family: $font-family;
         width: 100%;
         margin: 0px 0px 10px 0px;
     }
 
     .armatupc__aside__email {
         font-size: 20px;
-        font-family: 'Mulish', sans-serif;
+        font-family: $font-family;
         width: 100%;
     }
 
     .armatupc__aside__select__pais {
         font-size: 18px;
-        font-family: 'Mulish', sans-serif;
+        font-family: $font-family;
         width: 250px;
         height: 40px;
         margin: 0px 0px 30px 0px;
@@ -502,7 +492,7 @@ footer {
     .trayectoria__article__titulo {
         width: 85%;
         font-size: 35px;
-        font-family: 'Mulish', sans-serif;
+        font-family: $font-family;
         margin: 20px 0px 5px 0px;
     }
 
@@ -511,7 +501,7 @@ footer {
         width: 85%;
         margin: 0px;
         font-size: 25px;
-        font-family: 'Mulish', sans-serif;
+        font-family: $font-family;
     }
 
     .trayectoria__aside__imagen {
@@ -532,32 +522,18 @@ footer {
 
     .contacto__main__section {
         padding: 0;
-        height: 250px;
     }
 
     .contacto__main {
-        grid-template-rows: 30% 23% 23% 24%;
+        height: 1500px;
+        grid-template-rows: 35% 23% 23% 18%;
     }
 
     .contacto__main__form {
-        padding: 30px 0;
         width: 350px;
     }
 
     /* FIN Contacto */
-    footer {
-        background-color: #a6e9c5;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        height: auto;
-        width: auto;
-    }
-
-    .footer__grid__redes a {
-        margin: 15px;
-    }
 
     @media (max-width: 420px) {
 
@@ -565,22 +541,37 @@ footer {
 
         .footer p {
             font-size: 10px;
+        }
 
+        .footer__grid__redes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
         }
 
         /* Contacto */
 
+        .contacto__main {
+            align-items: center;
+            justify-content: center;
+            margin: 50px 0;
+            grid-template-columns: 90%;
+            grid-template-rows: 45% 15% 25% 15%;
+            grid-template-areas:
+                "texto__contacto"
+                "mapa__contacto"
+                "formulario__contacto"
+                "formulario__contacto";
+            height: 1300px;
+        }
 
         .contacto__section__mapa {
             width: 240px;
         }
 
-        .contacto__main__section {
-            height: 300px;
-        }
-
         .contacto__main__form {
-            width: 250px;
+            text-align: center;
+            width: 220px;
 
             label {
                 font-size: 20px;

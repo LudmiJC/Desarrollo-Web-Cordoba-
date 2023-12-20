@@ -8,14 +8,16 @@
 .contacto__main {
     display: grid;
     justify-items: center;
+    align-items: center;
+    height: 700px;
     grid-template-columns: 60% 40%;
-    grid-template-rows: 35% 20% 20% 25%;
+    grid-template-rows: 30% 20% 10% 40%;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
         "texto__contacto formulario__contacto"
-        "mapa__contacto formulario__contacto"
-        "mapa__contacto formulario__contacto"
+        "texto__contacto formulario__contacto"
+        "texto__contacto formulario__contacto"
         "mapa__contacto formulario__contacto";
     background-color: $color-fondo;
     padding: 30px 0 30px 0;
@@ -44,33 +46,25 @@
     flex-direction: column;
     padding: 20px;
     align-items: center;
-    height: 200px;
+    height: auto;
 }
 
 .contacto__section__titulo {
-    color: #060611;
     font-family: $font-family;
-    font-weight: 300;
-    font-size: 40px;
+    font-weight: $weight-titulo;
+    font-size: $size-titulo;
     text-align: center;
     margin-bottom: 10px;
-}
-
-.contacto__section__subtitulo {
-    color: #060611;
-    font-family: $font-family;
-    font-weight: 300;
-    font-size: 40px;
-    text-align: center;
-    margin-bottom: 15px;
+    width: 90%;
 }
 
 .contacto__section__parrafo {
-    color: #060611;
     font-family: $font-family;
-    font-weight: 300;
-    font-size: 30px;
+    font-weight: $weight-parrafo;
+    font-size: $size-parrafo;
+    font-style: $style-italic;
     text-align: center;
+    width: 75%;
 }
 
 

@@ -7,73 +7,66 @@
     background-color: #E4FFF0;
 }
 
+.armatupc__body {
+    box-sizing: content-box;
+    *{
+        box-sizing: content-box;
+    }
+}
 .armatupc__main__section {
     margin: 30px;
-    font-family: "Roboto", sans-serif;
+    font-family: $font-family;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.armatupc__main__section h1 {
-    font-weight: unset;
-    font-size: 60px;
-    margin: 10px 0 15px 0;
-}
-
-.armatupc__main__section h2 {
-    font-weight: unset;
-    font-size: 40px;
-}
-
-.armatupc__main__section p {
-    font-size: 30px;
-    width: 650px;
-    margin: 30px 0 30px 0;
-}
+.armatupc__article__flex {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .armatupc__article__titulo {
+        font-weight: $weight-titulo;
+        font-size: $size-titulo;
+        margin: 30px 5% 20px 5%;
+    }
+    .armatupc__article__subtitulo {
+        font-weight: $weight-subTitulo;
+        font-size: $size-subtitulo;
+        margin: 0 10% 20px 10%;
+    }
+    .armatupc__article__parrafo {
+        font-weight: $weight-parrafo;
+        font-style: $style-italic;
+        font-size: $size-parrafo;
+        margin: 0 15% 0 15%;
+    }
+} 
 
 .armatupc__main__aside {
-    max-width: none;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    width: 50vw;
+    overflow: hidden;
+    margin: 35px;
 }
 
 .armatupc__section__flex {
     display: flex;
-    align-items: center;
     text-align: center;
-    flex-direction: column;
-    align-content: center;
-}
-
-.armatupc__article__flex {
-    display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
 }
 
-.armatupc__article__titulo {
-    font-size: 30px;
-    width: 75vh;
-    font-family: 'Mulish', sans-serif;
-    margin: 30px 0px 0px 0px;
-}
-
-.armatupc__article__parrafo {
-    height: 120px;
-    width: 600px;
-    font-size: 25px;
-    font-family: 'Mulish', sans-serif;
-    margin: 5px 0px 0px 0px;
+.armatupc__aside__flex {
+    display: flex;
+    justify-content: center;
 }
 
 .armatupc__aside__form {
     font-size: 15px;
-    font-family: 'Mulish', sans-serif;
-    margin: 40px 0px 40px 0px;
+    font-family: $font-family;
+    margin: 0px 0px 50px 0px;
+    padding: 0 50px 0 50px;
     height: 500px;
     display: flex;
     flex-direction: column;
@@ -88,13 +81,15 @@
 .armatupc__aside__datosUsuario {
     display: flex;
     justify-content: space-between;
-    width: 900px;
+    width: 80vw;
     height: 40px;
     margin: 20px 0px 0px 0px;
 }
 
 .armatupc__aside__datosUsuario input {
+    width: 80%;
     text-align: center;
+    margin: 0px 10px;
 }
 
 .armatupc__aside__selectComponentes {
@@ -118,26 +113,26 @@
 
 .armatupc__aside__nombre {
     font-size: 20px;
-    font-family: 'Mulish', sans-serif;
+    font-family: $font-family;
     width: 270px;
     margin: 0px 0px 0px 0px;
 }
 
 .armatupc__aside__telefono {
     font-size: 20px;
-    font-family: 'Mulish', sans-serif;
+    font-family: $font-family;
     width: 270px;
 }
 
 .armatupc__aside__email {
     font-size: 20px;
-    font-family: 'Mulish', sans-serif;
+    font-family: $font-family;
     width: 270px;
 }
 
 .armatupc__aside__select {
     font-size: 18px;
-    font-family: 'Mulish', sans-serif;
+    font-family: $font-family;
     width: 350px;
     height: 40px;
     text-align: center;
@@ -145,7 +140,7 @@
 
 .armatupc__aside__select__pais {
     font-size: 18px;
-    font-family: 'Mulish', sans-serif;
+    font-family: $font-family;
     text-align: center;
     width: 350px;
     height: 40px;
@@ -154,7 +149,7 @@
 
 .armatupc__aside__comprar {
     font-size: 15px;
-    font-family: 'Mulish', sans-serif;
+    font-family: $font-family;
     background-color: #d7fbe8;
     border: 2px solid #BAE6CF;
     box-shadow: 3px 3px 11px 0 rgba(0, 0, 0, 0.5);
@@ -162,13 +157,13 @@
     height: 50px;
 }
 
-.armatupc__aside__comprar :hover {
+.armatupc__aside__comprar:hover {
     color: #1d0000;
     box-shadow: 0 4px 16px #dba5a5;
     transition: all 0.2s ease;
 }
 
-.armatupc__aside__comprar :active {
+.armatupc__aside__comprar:active {
     background-color: #fd6868;
     color: white;
     transition: all 0.2s ease;
@@ -176,7 +171,7 @@
 
 .armatupc__aside__restablecer {
     font-size: 15px;
-    font-family: 'Mulish', sans-serif;
+    font-family: $font-family;
     background-color: #d7fbe8;
     border: 2px solid #BAE6CF;
     box-shadow: 3px 3px 11px 0 rgba(0, 0, 0, 0.5);
@@ -185,27 +180,28 @@
     height: 50px;
 }
 
-.armatupc__aside__restablecer :hover {
+.armatupc__aside__restablecer:hover {
     color: #1d0000;
     box-shadow: 0 4px 16px #dba5a5;
     transition: all 0.2s ease;
 }
 
-.armatupc__aside__restablecer :active {
+.armatupc__aside__restablecer:active {
     background-color: #fd6868;
     color: white;
     transition: all 0.2s ease;
 }
-
-.armatupc__article__imagen {
-    width: 60vh;
-    height: auto;
+.carousel{
+    height: 100%;
 }
 
-.carousel-item img {
-    transition: transform 1s ease;
-    transform: scale(1);
-    /* Esto asegura que la imagen no tenga zoom aplicado */
+.carousel-indicators {
+    position: relative;
+    margin-top: 10px;
+    li{
+        background-color: black;
+    }
 }
+
 
 /* // Armatupc */

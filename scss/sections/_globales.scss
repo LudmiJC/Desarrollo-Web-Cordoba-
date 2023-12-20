@@ -2,9 +2,6 @@
 
 /* globlales */
 
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
 * {
     margin: 0;
     /* margen exterior */
@@ -117,15 +114,17 @@ footer {
 
 footer {
     background-color: #a6e9c5;
-    height: 25vh;
     display: grid;
     grid-template-columns: 2fr 3fr 1fr;
     grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
 }
 
 footer a img {
     height: 70px;
     width: 70px;
+    margin: 10px;
 }
 
 .footer__grid__redes {
@@ -134,27 +133,27 @@ footer a img {
     grid-template-rows: 1fr 1fr;
     align-items: center;
     justify-items: center;
-    margin: 8px 0px 0px 0px;
+    margin: 20px 0;
 }
 
 .footer__marca {
-    display: flex;
+    font-family: $font-family;
+    font-weight: $weight-subTitulo;
+    font-style: $style-italic;
     font-size: 60px;
-    font-style: italic;
-    align-items: center;
-    justify-content: center;
-    width: 35vw;
-    font-family: none;
-    color: black;
+    text-align: center;
+    width:max-content ;
+    margin: 15px;
 }
 
 .footer__parrafo {
-    margin: 20px;
+    font-family: $font-family;
+    font-weight: $weight-parrafo;
     font-size: 25px;
-    font-family: 'Mulish', sans-serif;
+    text-align: center;
     display: flex;
     align-items: center;
-    color: black;
+    margin: 20px 35px;
 }
 
 
