@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap");
 /* globlales */
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap");
@@ -1053,6 +1054,12 @@ footer a img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr; }
+  .productos__aside__grid {
+    grid-template-columns: 1fr;
+    /* Esto establece una sola columna */
+    grid-template-rows: auto;
+    /* Esto ajusta el tamaño de las filas al contenido */
+    grid-template-areas: "titulo__placasMadres" "placaMadre1" "placaMadre2" "placaMadre3" "placaMadre4" "titulo__procesadores" "procesador1" "procesador2" "procesador3" "procesador4" "titulo__ram" "ram1" "ram2" "ram3" "ram4" "titulo__placasDeVideo" "placaDeVideo1" "placaDeVideo2" "placaDeVideo3" "placaDeVideo4" "titulo__fuentesDeAlimentacion" "fuenteDeAlimentacion1" "fuenteDeAlimentacion2" "fuenteDeAlimentacion3" "fuenteDeAlimentacion4" "titulo__gabinetes" "gabinete1" "gabinete2" "gabinete3" "gabinete4" "titulo__perifericos" "mouse1" "mouse2" "teclado1" "teclado2" "monitor1" "monitor2" "monitor3" "monitor4" "camara1" "mousePad1" "antena1" "pendrive1"; }
   /* Contacto */
   .contacto__main {
     align-items: center;
