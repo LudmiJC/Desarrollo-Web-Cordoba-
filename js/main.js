@@ -1,127 +1,63 @@
 
+const productos = {
+    placaMadre1: 50000,
+    placaMadre2: 35000,
+    placaMadre3: 85000,
+    placaMadre4: 85000,
+    procesador1: 25000,
+    procesador2: 45000,
+    procesador3: 75000,
+    procesador4: 75000,
+    ram1: 26000,
+    ram2: 16000,
+    ram3: 30000,
+    ram4: 30000,
+    placadevideo1: 82000,
+    placadevideo2: 100000,
+    placadevideo3: 168000,
+    placadevideo4: 168000,
+    fuentedealimentacion1: 58000,
+    fuentedealimentacion2: 30000,
+    fuentedealimentacion3: 40000,
+    fuentedealimentacion4: 40000,
+    gabinete1: 25000,
+    gabinete2: 41000,
+    gabinete3: 46000,
+    gabinete4: 46000,
+    mouse1: 5000,
+    mouse2: 12000,
+    teclado1: 14000,
+    teclado2: 23000,
+    monitor1: 35000,
+    monitor2: 60000,
+    monitor3: 70000,
+    monitor4: 120000,
+    camara1: 3400,
+    mousepad1: 3000,
+    antena1: 2000,
+    pendrive1: 2700,
+};
+
 let totalCarrito = 0;
 
-function agregarAlCarrito(productoId) {
-    let seguirComprando = true
-    while (seguirComprando) {
-        let precio = 0;
+document.addEventListener('DOMContentLoaded', (event) => {
+    const botonesAgregar = document.querySelectorAll('.agregar-carrito');
+    
+    botonesAgregar.forEach(boton => {
+        boton.addEventListener('click', (e) => {
+            const productoId = e.target.dataset.productoId;
+            if (productos[productoId] !== undefined) {
+                let precio = productos[productoId];
+                totalCarrito += precio;
+                alert('Producto agregado al carrito. Total hasta ahora: $' + totalCarrito);
+                seguirComprando = confirm('¿Quiere agregar mas de uno?');
+                alert('Agregado correctamente, Total hasta ahora: $' + totalCarrito);
 
-        switch (productoId) {
-            case 'placaMadre1':
-                precio = 50000;
-                break;
-            case 'placaMadre2':
-                precio = 35000;
-                break;
-            case 'placaMadre3':
-                precio = 85000;
-                break;
-            case 'placaMadre4':
-                precio = 85000;
-                break;
-            case 'procesador1':
-                precio = 25000;
-                break;
-            case 'procesador2':
-                precio = 45000;
-                break;
-            case 'procesador3':
-                precio = 75000;
-                break;
-            case 'procesador4':
-                precio = 75000;
-                break;
-            case 'ram1':
-                precio = 26000;
-                break;
-            case 'ram2':
-                precio = 16000;
-                break;
-            case 'ram3':
-                precio = 30000;
-                break;
-            case 'ram4':
-                precio = 30000;
-                break;
-            case 'placadevideo1':
-                precio = 82000;
-                break;
-            case 'placadevideo2':
-                precio = 100000;
-                break;
-            case 'placadevideo3':
-                precio = 168000;
-                break;
-            case 'placadevideo4':
-                precio = 168000;
-                break;
-            case 'fuentedealimentacion1':
-                precio = 58000;
-                break;
-            case 'fuentedealimentacion2':
-                precio = 30000;
-                break;
-            case 'fuentedealimentacion3':
-                precio = 40000;
-                break;
-            case 'fuentedealimentacion4':
-                precio = 40000;
-                break;
-            case 'gabinete1':
-                precio = 25000;
-                break;
-            case 'gabinete2':
-                precio = 41000;
-                break;
-            case 'gabinete3':
-                precio = 46000;
-                break;
-            case 'gabinete4':
-                precio = 46000;
-                break;
-            case 'mouse1':
-                precio = 5000;
-                break;
-            case 'mouse2':
-                precio = 12000;
-                break;
-            case 'teclado1':
-                precio = 14000;
-                break;
-            case 'teclado2':
-                precio = 23000;
-                break;
-            case 'monitor1':
-                precio = 35000;
-                break;
-            case 'monitor2':
-                precio = 60000;
-                break;
-            case 'monitor3':
-                precio = 70000;
-                break;
-            case 'monitor4':
-                precio = 120000;
-                break;
-            case 'camara1':
-                precio = 3400;
-                break;
-            case 'mousepad1':
-                precio = 3000;
-                break;
-            case 'antena1':
-                precio = 2000;
-                break;
-            case 'pendrive1':
-                precio = 2700;
-                break;
-        }
-
-        totalCarrito += precio;
-        alert('Producto agregado al carrito. Total hasta ahora: $' + totalCarrito);
-
-        // pregunto si quiere seguir comprarndo
-        seguirComprando = confirm('¿Quiere agregar mas de uno?');
-    }
-}
+                
+            } else {
+                alert('El producto no existe. Intente nuevamente.');
+            }
+        });
+    });
+});
 
