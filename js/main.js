@@ -39,7 +39,11 @@ const productos = {
 };
 
 let totalCarrito = 0;
-
+let seleccion = prompt('¿Desea ver la lista de productos?');
+while (seleccion !== 'si' && seleccion !== 'no') {
+    alert('Por favor, ingresa "si" o "no"');
+    seleccion = prompt('¿Desea ver la lista de productos?');
+}
 document.addEventListener('DOMContentLoaded', (event) => {
     const botonesAgregar = document.querySelectorAll('.agregar-carrito');
     
@@ -52,6 +56,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 alert('Producto agregado al carrito. Total hasta ahora: $' + totalCarrito);
                 seguirComprando = confirm('¿Quiere agregar mas de uno?');
                 alert('Agregado correctamente, Total hasta ahora: $' + totalCarrito);
+                console.log(productos)
 
                 
             } else {
