@@ -1,68 +1,48 @@
+//.........arma tu pc.................//
 
-const productos = {
-    placaMadre1: 50000,
-    placaMadre2: 35000,
-    placaMadre3: 85000,
-    placaMadre4: 85000,
-    procesador1: 25000,
-    procesador2: 45000,
-    procesador3: 75000,
-    procesador4: 75000,
-    ram1: 26000,
-    ram2: 16000,
-    ram3: 30000,
-    ram4: 30000,
-    placadevideo1: 82000,
-    placadevideo2: 100000,
-    placadevideo3: 168000,
-    placadevideo4: 168000,
-    fuentedealimentacion1: 58000,
-    fuentedealimentacion2: 30000,
-    fuentedealimentacion3: 40000,
-    fuentedealimentacion4: 40000,
-    gabinete1: 25000,
-    gabinete2: 41000,
-    gabinete3: 46000,
-    gabinete4: 46000,
-    mouse1: 5000,
-    mouse2: 12000,
-    teclado1: 14000,
-    teclado2: 23000,
-    monitor1: 35000,
-    monitor2: 60000,
-    monitor3: 70000,
-    monitor4: 120000,
-    camara1: 3400,
-    mousepad1: 3000,
-    antena1: 2000,
-    pendrive1: 2700,
-};
+document.addEventListener('DOMContentLoaded', function() {
+    const valorTotalElemento = document.getElementById('valor');
+    const selects = document.querySelectorAll('.armatupc__aside__selectComponentes .armatupc__aside__select');
 
-let totalCarrito = 0;
-let seleccion = prompt('¿Desea ver la lista de productos?');
-while (seleccion !== 'si' && seleccion !== 'no') {
-    alert('Por favor, ingresa "si" o "no"');
-    seleccion = prompt('¿Desea ver la lista de productos?');
-}
-document.addEventListener('DOMContentLoaded', (event) => {
-    const botonesAgregar = document.querySelectorAll('.agregar-carrito');
-    
-    botonesAgregar.forEach(boton => {
-        boton.addEventListener('click', (e) => {
-            const productoId = e.target.dataset.productoId;
-            if (productos[productoId] !== undefined) {
-                let precio = productos[productoId];
-                totalCarrito += precio;
-                alert('Producto agregado al carrito. Total hasta ahora: $' + totalCarrito);
-                seguirComprando = confirm('¿Quiere agregar mas de uno?');
-                alert('Agregado correctamente, Total hasta ahora: $' + totalCarrito);
-                console.log(productos)
+    function extraerNumeroDeTexto(texto) {
+        const match = texto.match(/\$([0-9]+)\.([0-9]+)/);
+        return match ? parseInt(match[1] + match[2]) : 0;
+    }
 
-                
-            } else {
-                alert('El producto no existe. Intente nuevamente.');
-            }
+    function actualizarTotal() {
+        let total = 0;
+        let seleccion = {};
+
+        selects.forEach(select => {
+            const valor = extraerNumeroDeTexto(select.options[select.selectedIndex].text);
+            total += valor;
+            seleccion[select.id] = select.selectedIndex;
         });
-    });
-});
 
+        valorTotalElemento.textContent = total.toLocaleString('es-AR', { style: 'currency', currency: 'ARS' });
+
+        //Guardo la seleccion del usuario en el formato JSON en localStorage
+        localStorage.setItem('seleccionUsuario', JSON.stringify(seleccion));
+    }
+
+    function cargarSeleccionGuardada() {
+        const seleccion = JSON.parse(localStorage.getItem('seleccionUsuario'));
+
+        if (seleccion) {
+            selects.forEach(select => {
+                const indiceSeleccionado = seleccion[select.id];
+                if (indiceSeleccionado !== undefined) {
+                    select.selectedIndex = indiceSeleccionado;
+                }
+            });
+            actualizarTotal();
+        }
+    }
+
+    selects.forEach(select => {
+        select.addEventListener('change', actualizarTotal);
+    });
+
+    // Cargamos la selección guardada al iniciar
+    cargarSeleccionGuardada();
+});
