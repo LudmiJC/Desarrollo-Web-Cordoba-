@@ -43,6 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
         select.addEventListener('change', actualizarTotal);
     });
 
-    // Cargamos la selección guardada al iniciar
+    // Cargo la selección guardada al iniciar
     cargarSeleccionGuardada();
 });

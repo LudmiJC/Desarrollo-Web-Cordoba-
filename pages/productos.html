@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="icon" type="image/svg+xml" href="../resources/images/Pc Planet cudrado.svg">
-    <script src="../js/main.js"></script>
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <script src="../cliente/js/productos.js"></script>
+    <script src="../index.js"></script>
 </head>
 
 <body>
@@ -40,37 +42,41 @@
             </article>
         </section>
         <!-- Productos -->
-        <aside class="productos__aside__grid">
-            <h2 class="productos__grid__titulo__placasMadres">Placas madres</h2>
+        <aside class="card-product-container productos__aside__grid">
+            <h2 class="card-product productos__grid__titulo__placasMadres">Placas madres</h2>
 
             <!-- PLACAS MADRE -->
 
-            <div class="productos__aside__grid__div productos__grid__placaMadre1">
-                <h3>Asus Rog Strix <B550-f></B550-f> </h3><img
+            <div class="card productos__aside__grid__div productos__grid__placaMadre1">
+                <h3 class="name">Asus Rog Strix <B550-f></B550-f> </h3><img
                     src="../resources/images/mother asus rog strix B550-f.jpg" alt="asus rog strix B550-f">
-                <h4>Precio: $50.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h4 class="price">Precio: $50.000</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
             <div class="productos__aside__grid__div productos__grid__placaMadre2">
-                <h3>Asus Tuf B650M</h3><img src="../resources/images/mother asus tuf B650M.jpg" alt="asus tuf B650M">
-                <h4>Precio: $35.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h3 class="name">Asus Tuf B650M</h3><img src="../resources/images/mother asus tuf B650M.jpg" alt="asus tuf B650M">
+                <h4 class="price">Precio: $35.000</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
             <div class="productos__aside__grid__div productos__grid__placaMadre3">
-                <h3>GigaByte X570SI</h3><img src="../resources/images/mother gigabyte X570SI.jpg" alt="GigaByte X570SI">
-                <h4>Precio: $85.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h3 class="name">GigaByte X570SI</h3><img src="../resources/images/mother gigabyte X570SI.jpg" alt="GigaByte X570SI">
+                <h4 class="price">Precio: $85.000</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
             <div class="productos__aside__grid__div productos__grid__placaMadre4">
-                <h3>MSI Force 5438S</h3><img src="../resources/images/placa_madre_4.svg" alt="MSI Force 5438S">
-                <h4>Precio: $85.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h3 class="name">MSI Force 5438S</h3><img src="../resources/images/placa_madre_4.svg" alt="MSI Force 5438S">
+                <h4 class="price">Precio: $85.000</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
@@ -79,30 +85,34 @@
 
             <h2 class="productos__grid__titulo__procesadores">Procesadores</h2>
             <div class="productos__aside__grid__div productos__grid__procesador1">
-                <h3>AMD Ryzen 3 3200g</h3><img src="../resources/images/ryzen 3 3200g.jpg" alt="AMD Ryzen 3 3200g">
-                <h4>Precio: $25.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h3 class="name">AMD Ryzen 3 3200g</h3><img src="../resources/images/ryzen 3 3200g.jpg" alt="AMD Ryzen 3 3200g">
+                <h4 class="price">Precio: $25.000</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
             <div class="productos__aside__grid__div productos__grid__procesador2">
-                <h3>AMD Ryzen 5 5600g</h3><img src="../resources/images/ryzen 5 5600g.jpg" alt="AMD Ryzen 5 5600g">
-                <h4>Precio: $45.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h3 class="name">AMD Ryzen 5 5600g</h3><img src="../resources/images/ryzen 5 5600g.jpg" alt="AMD Ryzen 5 5600g">
+                <h4 class="price">Precio: $45.000</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
             <div class="productos__aside__grid__div productos__grid__procesador3">
-                <h3>AMD Ryzen 7 5700g</h3><img src="../resources/images/ryzen 7 5700g.jpg" alt="AMD Ryzen 7 5700g">
-                <h4>Precio: $75.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h3 class="name">AMD Ryzen 7 5700g</h3><img src="../resources/images/ryzen 7 5700g.jpg" alt="AMD Ryzen 7 5700g">
+                <h4 class="price">Precio: $75.000</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
             <div class="productos__aside__grid__div productos__grid__procesador4">
-                <h3>Intel I9 10900</h3><img src="../resources/images/procesador_4.svg" alt="Intel I9 10900">
-                <h4>Precio: $75.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h3 class="name">Intel I9 10900</h3><img src="../resources/images/procesador_4.svg" alt="Intel I9 10900">
+                <h4 class="price">Precio: $75.000</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
@@ -111,36 +121,40 @@
 
             <h2 class="productos__grid__titulo__ram">Ram</h2>
             <div class="productos__aside__grid__div productos__grid__ram1">
-                <h3>Disco SSD M.2 1TB Kingston</h3><img
+                <h3 class="name">Disco SSD M.2 1TB Kingston</h3><img
                     src="../resources/images/Disco Sólido SSD M.2 Kingston 1TB NV2 3500MB.s NVME PCI-E 4x.jpg"
                     alt="Disco SSD M.2 1TB">
-                <h4>Precio: $26.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h4 class="price">Precio: $26.000</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
             <div class="productos__aside__grid__div productos__grid__ram2">
-                <h3>Disco SSD M.2 1TB XPG</h3><img
+                <h3 class="name">Disco SSD M.2 1TB XPG</h3><img
                     src="../resources/images/Disco Sólido SSD M.2 ADATA 1TB XPG Spectrix S40G RGB 3500MB.s NVMe PCI-E X4.jpg"
                     alt="Disco SSD M.2 1TB XPG">
-                <h4>Precio: $16.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h4 class="price">Precio: $16.000</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
             <div class="productos__aside__grid__div productos__grid__ram3">
-                <h3>Disco SSD M.2 2TB Cardea Zero</h3><img
+                <h3 class="name">Disco SSD M.2 2TB Cardea Zero</h3><img
                     src="../resources/images/Disco Solido SSD M.2 Team 2TB Cardea Zero Z440 5000MB.s PCIe Gen40.jpg"
                     alt="Disco SSD M.2 2TB Cardea Zero">
-                <h4>Precio: $30.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h4 class="price">Precio: $30.000</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
             <div class="productos__aside__grid__div productos__grid__ram4">
-                <h3>Andromedi ddr5 16gb</h3><img src="../resources/images/ram_4.svg" alt="Andromedi ddr5 16gb">
-                <h4>Precio: $30.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h3 class="name">Andromedi ddr5 16gb</h3><img src="../resources/images/ram_4.svg" alt="Andromedi ddr5 16gb">
+                <h4 class="price">Precio: $30.000</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
@@ -149,34 +163,38 @@
 
             <h2 class="productos__grid__titulo__placasDeVideo">Placas de video</h2>
             <div class="productos__aside__grid__div productos__grid__placaDeVideo1">
-                <h3>Asus GTX 1660 super </h3><img
+                <h3 class="name">Asus GTX 1660 super </h3><img
                     src="../resources/images/Placa de Video ASUS GeForce GTX 1660 SUPER.jpg" alt="Asus GTX 1660 super">
-                <h4>Precio: $82.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h4 class="price">Precio: $82.000</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
             <div class="productos__aside__grid__div productos__grid__placaDeVideo2">
-                <h3>Asus Geforce RTX 3070</h3><img src="../resources/images/Placa de Video ASUS GeForce RTX 3070.jpg"
+                <h3 class="name">Asus Geforce RTX 3070</h3><img src="../resources/images/Placa de Video ASUS GeForce RTX 3070.jpg"
                     alt="Asus Geforce RTX 3070">
-                <h4>Precio: $100.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h4 class="price">Precio: $100.000</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
             <div class="productos__aside__grid__div productos__grid__placaDeVideo3">
-                <h3>Zotac Geforce RTX 3070 TI</h3><img
+                <h3 class="name">Zotac Geforce RTX 3070 TI</h3><img
                     src="../resources/images/Placa de Video Zotac GeForce RTX 3070 Ti.jpg"
                     alt="Zotac Geforce RTX 3070 TI">
-                <h4>Precio: $168.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h4 class="price">Precio: $168.000</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
             <div class="productos__aside__grid__div productos__grid__placaDeVideo4">
-                <h3>GigaByte 4090 GTX</h3><img src="../resources/images/placa_madre_4.svg" alt="GigaByte 4090 GTX">
-                <h4>Precio: $168.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h3 class="name">GigaByte 4090 GTX</h3><img src="../resources/images/placa_madre_4.svg" alt="GigaByte 4090 GTX">
+                <h4 class="price">Precio: $168.000</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
@@ -185,36 +203,40 @@
 
             <h2 class="productos__grid__titulo__fuentesDeAlimentacion">Fuentes de Alimentacón</h2>
             <div class="productos__aside__grid__div productos__grid__fuenteDeAlimentacion1">
-                <h3>Fuente ADATA 750W</h3><img src="../resources/images/Fuente ADATA 750W XPG PYLON 80 Plus Bronze.jpg"
+                <h3 class="name">Fuente ADATA 750W</h3><img src="../resources/images/Fuente ADATA 750W XPG PYLON 80 Plus Bronze.jpg"
                     alt="Fuente ADATA 750W">
-                <h4>Precio: $58.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h4 class="price">Precio: $58.000</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
             <div class="productos__aside__grid__div productos__grid__fuenteDeAlimentacion2">
-                <h3>Fuente MSI 850W</h3><img
+                <h3 class="name">Fuente MSI 850W</h3><img
                     src="../resources/images/Fuente MSI 850W 80 Plus Gold Full Modular MPG A850GF.jpg"
                     alt="Fuente MSI 850W">
-                <h4>Precio: $30.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h4 class="price">Precio: $30.000</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
             <div class="productos__aside__grid__div productos__grid__fuenteDeAlimentacion3">
-                <h3>Fuente ASUS 1000W</h3><img
+                <h3 class="name">Fuente ASUS 1000W</h3><img
                     src="../resources/images/Fuente ASUS ROG STRIX 1000W 80 Plus Gold Full Modular 1000G.jpg"
                     alt="Fuente ASUS 1000W">
-                <h4>Precio: $40.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h4 class="price">Precio: $40.000</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
             <div class="productos__aside__grid__div productos__grid__fuenteDeAlimentacion4">
-                <h3>Focus 1100W 80P platinum</h3><img src="../resources/images/fuente_de_alimentacion_4.svg"
+                <h3 class="name">Focus 1100W 80P platinum</h3><img src="../resources/images/fuente_de_alimentacion_4.svg"
                     alt="Focus 1100W 80P platinum">
-                <h4>Precio: $40.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h4 class="price">Precio: $40.000</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
             </div>
 
@@ -222,37 +244,41 @@
 
             <h2 class="productos__grid__titulo__gabinetes">Gabinetes</h2>
             <div class="productos__aside__grid__div productos__grid__gabinete1">
-                <h3>Gabinete Cooler Master</h3><img
+                <h3 class="name">Gabinete Cooler Master</h3><img
                     src="../resources/images/Gabinete_Cooler_Master_HAF_700_EVO_ARGB_Vidrio_Templado_E-ATX_Black_abc54419-grn.jpg"
                     alt="Gabinete Cooler Master">
-                <h4>Precio: $25.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h4 class="price">Precio: $25.000</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
             <div class="productos__aside__grid__div productos__grid__gabinete2">
-                <h3>Gabinete Antec Torque White ARGB</h3><img
+                <h3 class="name">Gabinete Antec Torque White ARGB</h3><img
                     src="../resources/images/Gabinete Antec Torque Black.White ARGB Vidrio Templado.jpg"
                     alt="Gabinete Antec Torque White ARGB">
-                <h4>Precio: $41.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h4 class="price">Precio: $41.000</h4>
+                <button class="agregar-carrito" id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
             <div class="productos__aside__grid__div productos__grid__gabinete3">
-                <h3>Gabinete Antec Torque Black ARGB</h3><img
+                <h3 class="name">Gabinete Antec Torque Black ARGB</h3><img
                     src="../resources/images/Gabinete Antec Torque ARGB Vidrio Templado.jpg"
                     alt="Gabinete Antec Torque Black ARGB">
-                <h4>Precio: $46.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h4 class="price">Precio: $46.000</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
             <div class="productos__aside__grid__div productos__grid__gabinete4">
-                <h3>Asus 5 coolers black rgb</h3><img src="../resources/images/gabinete_4.svg"
+                <h3 class="name">Asus 5 coolers black rgb</h3><img src="../resources/images/gabinete_4.svg"
                     alt="Asus 5 coolers black rgb">
-                <h4>Precio: $46.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h4 class="price">Precio: $46.000</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
@@ -261,99 +287,108 @@
 
             <h2 class="productos__grid__titulo__perifericos">Perifericos</h2>
             <div class="productos__aside__grid__div productos__grid__mouse1">
-                <h3>Logitech G502Xplus</h3><img
+                <h3 class="name">Logitech G502Xplus</h3><img
                     src="../resources/images/Mouse_Logitech_G502X_Plus_White_Lightforce_Hero_25K_Wireless_RGB_b96064b9-grn.jpg"
                     alt="Logitech G502Xplus">
-                <h4>Precio: $5.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h4 class="price">Precio: $5.000</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
             <div class="productos__aside__grid__div productos__grid__mouse2">
-                <h3>Logitech G502 hero</h3><img src="../resources/images/Logitech G502 Hero.svg"
+                <h3 class="name">Logitech G502 hero</h3><img src="../resources/images/Logitech G502 Hero.svg"
                     alt="Logitech G502 hero">
-                <h4>Precio: $12.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h4 class="price">Precio: $12.000</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
             <div class="productos__aside__grid__div productos__grid__teclado1">
-                <h3>Redragon mecanico 942S</h3><img src="../resources/images/Redragon Mecanico 942s.svg"
+                <h3 class="name"> Redragon mecanico 942S</h3><img src="../resources/images/Redragon Mecanico 942s.svg"
                     alt="Redragon mecanico 942S">
-                <h4>Precio: $14.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h4 class="price">Precio: $14.000</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
             <div class="productos__aside__grid__div productos__grid__teclado2">
-                <h3>Logitech Aurora G713</h3><img src="../resources/images/Teclado Logitech Aurora G713 White RGB.jpg"
+                <h3 class="name">Logitech Aurora G713</h3><img src="../resources/images/Teclado Logitech Aurora G713 White RGB.jpg"
                     alt="Logitech Aurora G713">
-                <h4>Precio: $23.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h4 class="price">Precio: $23.000</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
             <div class="productos__aside__grid__div productos__grid__monitor1">
-                <h3>Samsung Led 1080p 60hrz</h3><img src="../resources/images/monitor_1.svg"
+                <h3 class="name">Samsung Led 1080p 60hrz</h3><img src="../resources/images/monitor_1.svg"
                     alt="Samsung Led 1080p 60hrz">
-                <h4>Precio: $35.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h4 class="price">Precio: $35.000</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
             <div class="productos__aside__grid__div productos__grid__monitor2">
-                <h3>Philips 1080p 120hrz curvo</h3><img src="../resources/images/monitor_2.svg"
+                <h3 class="name">Philips 1080p 120hrz curvo</h3><img src="../resources/images/monitor_2.svg"
                     alt="Philips 1080p 120hrz curvo">
-                <h4>Precio: $60.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h4 class="price">Precio: $60.000</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
             <div class="productos__aside__grid__div productos__grid__monitor3">
-                <h3>Samsung 1080p 144hrz curvo</h3><img src="../resources/images/monitor_3.svg"
+                <h3 class="name">Samsung 1080p 144hrz curvo</h3><img src="../resources/images/monitor_3.svg"
                     alt="Samsung 1080p 144hrz curvo">
-                <h4>Precio: $70.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h4 class="price">Precio: $70.000</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
             <div class="productos__aside__grid__div productos__grid__monitor4">
-                <h3>LG 1080p 240hrz</h3><img src="../resources/images/monitor_4.svg" alt="LG 1080p 240hrz">
-                <h4>Precio: $120.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h3 class="name">LG 1080p 240hrz</h3><img src="../resources/images/monitor_4.svg" alt="LG 1080p 240hrz">
+                <h4 class="price">Precio: $120.000</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
             <div class="productos__aside__grid__div productos__grid__camara1">
-                <h3>Camara Logitech 5483fc</h3><img src="../resources/images/camara_1.svg" alt="Camara Logitech 5483fc">
-                <h4>Precio: $3.400</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h3 class="name">Camara Logitech 5483fc</h3><img src="../resources/images/camara_1.svg" alt="Camara Logitech 5483fc">
+                <h4 class="price">Precio: $3.400</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
             <div class="productos__aside__grid__div productos__grid__mousePad1">
-                <h3>Mouse pad Logitech 203d3u</h3><img src="../resources/images/mouse_pad_1.svg"
+                <h3 class="name">Mouse pad Logitech 203d3u</h3><img src="../resources/images/mouse_pad_1.svg"
                     alt="Mouse pad Logitech 203d3u">
-                <h4>Precio: $3.000</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h4 class="price">Precio: $3.000</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
             <div class="productos__aside__grid__div productos__grid__antena1">
-                <h3>Antena Noga 18ll293</h3><img src="../resources/images/antena_1.svg" alt="Antena Noga 18ll293">
-                <h4>Precio: $2.200</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
+                <h3 class="name">Antena Noga 18ll293</h3><img src="../resources/images/antena_1.svg" alt="Antena Noga 18ll293">
+                <h4 class="price">Precio: $2.200</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
 
 
             </div>
             <div class="productos__aside__grid__div productos__grid__pendrive1">
-                <h3>Pendrive Kingston 64gb</h3><img src="../resources/images/pendrive_1.svg"
+                <h3 class="name">Pendrive Kingston 64gb</h3><img src="../resources/images/pendrive_1.svg"
                     alt="Pendrive Kingston 64gb">
-                <h4>Precio: $2.700</h4>
-                <button class="agregar-carrito" data-producto-id="placaMadre1">Agregar al Carrito</button>
-
-
-            </div>
+                <h4 class="price">Precio: $2.700</h4>
+                <button class="agregar-carrito"  id="checkout-btn">Comprar</button>
+                <div id="wallet_container"></div>
         </aside>
     </main>
     <footer>
