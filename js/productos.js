@@ -48,4 +48,17 @@ const productos = [
         cantidad: 1,
     },
   ];
+
+const cargarProductos = () => {
+    fetch('./productos.json')
+      .then(response => response.json())
+      .then(data => {
+        productos = data;
+        pintarProductos();
+      })
+      .catch(error => console.error('Hubo un error cargando los productos:', error));
+  };
+
+window.addEventListener('DOMContentLoaded', cargarProductos);
+  
   
