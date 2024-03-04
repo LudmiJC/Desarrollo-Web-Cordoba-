@@ -206,7 +206,6 @@ body {
 .restar {
   cursor: pointer;
 }
-/* En tu archivo estilos.css */
 .card {
   transition: transform 0.2s;
 }
