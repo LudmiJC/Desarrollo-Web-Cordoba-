@@ -160,7 +160,6 @@ body {
   padding-top: 20px;
 }
 
-/*se agregaron unas lineas de css con media querys para que se adapte mejor al responsive :)*/
 
 @media only screen and (max-width: 750px) {
   .modal-container {
