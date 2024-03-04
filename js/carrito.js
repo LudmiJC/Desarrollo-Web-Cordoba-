@@ -64,7 +64,92 @@ const pintarCarrito = () => {
     totalBuying.className = "total-content";
     totalBuying.innerHTML = `Total a pagar: ${total} $`;
     modalContainer.append(totalBuying);
-  };
+
+    function emailCompra() {
+
+        Swal.fire({
+            title: "Por favor llena el formulario para finalizar la compra",
+            html: `
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-12">
+                        <form id="formularioCompra" class="form-control">
+                            <input type="text" name="nombre" value="Ludmila Cordoba" placeholder="Nombre" id="formNombre" class="form-control mb-2">
+                            <input type="text" name="direccion" value="Rawson 271" placeholder="Domicilio" class="form-control mb-2" id="formDomicilio">
+                            <input type="email" name="email" value="ludmilajacquelinecordoba@gmail.com" placeholder="Email" class="form-control mb-2" id="formEmail">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            `,
+            icon: "info",
+            showCancelButton: true,
+            confirmButtonColor: "#",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Finalizar Compra"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                const nombre = document.querySelector("#formNombre").value;
+                const domicilio = document.querySelector("#formDomicilio").value;
+                const email = document.querySelector("#formEmail").value;
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'Por favor ingresa un correo electrónico válido.',
+                    });
+                } else if (nombre.trim() === '' || domicilio.trim() === '') {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'Por favor completa todos los campos del formulario.',
+                    });
+                } else {
+                    Swal.fire({
+                        position: "center",
+                        icon: "success",
+                        title: "Procesando",
+                        html: `
+                        <div>
+                            <h5>Hola ${nombre} Estamos procesando su compra!!!</h5>
+                            <h5>Le enviaremos un email a ${email} !!!</h5>
+                            <div><progress id="progress" value="0" min="0" max="10"></progress></div>
+    
+                        </div>`,
+    
+                        showConfirmButton: false
+    
+                    });
+                    barra()
+                    setTimeout(() => {
+                        window.location.href = "compra.html";
+                    }, 11000); // Redirigir después de 11 segundos
+                }
+            }
+        });
+    }
+};
+    
+    const finalizarCompra = document.querySelector("#finalizarCompra");
+    finalizarCompra.addEventListener("click", () => {
+        if (carrito.length > 0) {
+            emailCompra()
+    
+        } else {
+            mensaje('No hay productos en el carrito', 'darkred');
+        }
+    });
+    
+    function mensaje(mensaje, estilo) {
+        Toastify({
+            text: mensaje,
+            duration: 3000,
+            style: {
+                background: estilo,
+            },
+        }).showToast();
+    }
   
   verCarrito.addEventListener("click", pintarCarrito);
   
