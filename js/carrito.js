@@ -80,9 +80,9 @@ function finalizarComprabtn() {
             <div class="row justify-content-center">
                 <div class="col-md-12">
                     <form id="formularioCompra" class="form-control">
-                        <input type="text" name="nombre" value="Ludmila Cordoba" placeholder="Nombre" id="formNombre" class="form-control mb-2">
-                        <input type="text" name="direccion" value="Rawson 271" placeholder="Domicilio" class="form-control mb-2" id="formDomicilio">
-                        <input type="email" name="email" value="ludmilajacquelinecordoba@gmail.com" placeholder="Email" class="form-control mb-2" id="formEmail">
+                        <input type="text" name="nombre" value="" placeholder="Nombre" id="formNombre" class="form-control mb-2">
+                        <input type="text" name="direccion" value="" placeholder="Domicilio" class="form-control mb-2" id="formDomicilio">
+                        <input type="email" name="email" value="" placeholder="Email" class="form-control mb-2" id="formEmail">
                     </form>
                 </div>
             </div>
@@ -90,15 +90,16 @@ function finalizarComprabtn() {
         `,
         icon: "info",
         showCancelButton: true,
-        confirmButtonColor: "#",
+        confirmButtonColor: "#00FF00",
         cancelButtonColor: "#d33",
-        confirmButtonText: "Finalizar Compra"
+        confirmButtonText: "Finalizar Reserva"
     }).then((result) => {
         if (result.isConfirmed) {
             const nombre = document.querySelector("#formNombre").value;
             const domicilio = document.querySelector("#formDomicilio").value;
             const email = document.querySelector("#formEmail").value;
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
             if (!emailRegex.test(email)) {
                 Swal.fire({
                     icon: 'error',
@@ -109,41 +110,28 @@ function finalizarComprabtn() {
                 Swal.fire({
                     icon: 'error',
                     title: 'Error',
-                    text: 'Por favor completa todos los campos del formulario.',
+                    text: 'Por favor completa el formulario.',
                 });
             } else {
                 Swal.fire({
                     position: "center",
                     icon: "success",
-                    title: "Procesando",
+                    title: "Reserva exitosa ",
                     html: `
                     <div>
-                        <h5>Hola ${nombre} Estamos procesando su compra!!!</h5>
-                        <h5>Le enviaremos un email a ${email} !!!</h5>
-                        <div><progress id="progress" value="0" min="0" max="10"></progress></div>
-
+                        <h5>Hola ${nombre}, Gracias por su reserva</h5>
+                        <h5>Le enviaremos un email a ${email} con toda la info para realizar la transferencia y gestionar envio </h5>
+                        <div><progress id="progress" value="0" min="0" max="2"></progress></div>
                     </div>`,
 
                     showConfirmButton: false
 
                 });
-                barra()
-                setTimeout(() => {
-                    window.location.href = "compra.html";
-                }, 11000); // Redirigir después de 11 segundos
-            }
+            };
         }
     });
 }
-function mensaje(mensaje, estilo) {
-    Toastify({
-        text: mensaje,
-        duration: 3000,
-        style: {
-            background: estilo,
-        },
-    }).showToast();
-}
+
 
 verCarrito.addEventListener("click", pintarCarrito);
 
